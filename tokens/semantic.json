@@ -1,0 +1,767 @@
+{
+  "font": {
+    "family": {
+      "body": {
+        "value": "{font.family.body-primitive}",
+        "type": "fontFamilies",
+        "description": "Body and UI typeface. Default for all text."
+      },
+      "brand": {
+        "value": "{font.family.brand-primitive}",
+        "type": "fontFamilies",
+        "description": "Branded display typeface. Use exclusively for brand expression."
+      },
+      "fallback": {
+        "value": "{font.family.fallback-primitive}",
+        "type": "fontFamilies",
+        "description": "System fallback. Used automatically when body fails to load."
+      }
+    },
+    "size": {
+      "micro": {
+        "value": "{font.size.11}",
+        "type": "fontSizes",
+        "description": "Smallest size — legal text, footnotes, disclosures."
+      },
+      "caption": {
+        "value": "{font.size.12}",
+        "type": "fontSizes",
+        "description": "Caption — image captions, helper text, table metadata."
+      },
+      "body-sm": {
+        "value": "{font.size.14}",
+        "type": "fontSizes",
+        "description": "Small body — dense UI text, compact lists."
+      },
+      "body": {
+        "value": "{font.size.16}",
+        "type": "fontSizes",
+        "description": "Default body — paragraph copy, form fields, standard UI text."
+      },
+      "heading-small": {
+        "value": "{font.size.16}",
+        "type": "fontSizes",
+        "description": "Lead paragraph — introductory paragraph beneath a heading."
+      },
+      "heading-medium": {
+        "value": "{font.size.18}",
+        "type": "fontSizes",
+        "description": "Smallest heading — section subheadings and card titles."
+      },
+      "heading-large": {
+        "value": "{font.size.20}",
+        "type": "fontSizes",
+        "description": "Mid heading — section headings within a page."
+      },
+      "heading-x-large": {
+        "value": "{font.size.24}",
+        "type": "fontSizes",
+        "description": "Large heading — major section headings."
+      },
+      "display": {
+        "value": "{font.size.28}",
+        "type": "fontSizes",
+        "description": "Hero / display — landing-page hero text and brand-led moments."
+      }
+    }
+  },
+  "leading": {
+    "heading": {
+      "value": "{leading.140}",
+      "type": "lineHeights",
+      "description": "Heading leading (140%)."
+    },
+    "body": {
+      "value": "{leading.150}",
+      "type": "lineHeights",
+      "description": "Body leading (150%)."
+    },
+    "caption": {
+      "value": "{leading.160}",
+      "type": "lineHeights",
+      "description": "Small-text leading (160%)."
+    }
+  },
+  "spacing": {
+    "density": {
+      "xs": {
+        "value": "{size.4}",
+        "type": "spacing",
+        "description": "Extra-small density. Icon ↔ label gap, tight inline groups."
+      },
+      "sm": {
+        "value": "{size.8}",
+        "type": "spacing",
+        "description": "Small density. Default button gap, tight rows."
+      },
+      "md": {
+        "value": "{size.16}",
+        "type": "spacing",
+        "description": "Medium density. Default padding/gap for most components."
+      },
+      "lg": {
+        "value": "{size.24}",
+        "type": "spacing",
+        "description": "Large density. Card padding, comfortable padding."
+      },
+      "xl": {
+        "value": "{size.32}",
+        "type": "spacing",
+        "description": "Extra-large density. Generous padding for hero blocks."
+      }
+    },
+    "stack": {
+      "xs": {
+        "value": "{size.4}",
+        "type": "spacing",
+        "description": "Tight vertical rhythm — closely related items, list rows."
+      },
+      "sm": {
+        "value": "{size.8}",
+        "type": "spacing",
+        "description": "Default vertical rhythm — gap between paragraphs."
+      },
+      "md": {
+        "value": "{size.16}",
+        "type": "spacing",
+        "description": "Medium vertical rhythm — subsection breaks."
+      },
+      "lg": {
+        "value": "{size.24}",
+        "type": "spacing",
+        "description": "Large vertical rhythm — section breaks."
+      },
+      "xl": {
+        "value": "{size.32}",
+        "type": "spacing",
+        "description": "Extra-large vertical rhythm — page-level breaks."
+      }
+    }
+  },
+  "radius": {
+    "sm": {
+      "value": "{radii.4}",
+      "type": "borderRadius",
+      "description": "Small radius — buttons, inputs, chips."
+    },
+    "md": {
+      "value": "{radii.8}",
+      "type": "borderRadius",
+      "description": "Medium radius — cards, modals, sheets."
+    }
+  },
+  "border": {
+    "subtle": {
+      "value": {
+        "color": "{colour.grey.tint.95}",
+        "width": "{border.1}",
+        "style": "solid"
+      },
+      "type": "border",
+      "description": "Hairline divider. List rows, table rows, inline section breaks."
+    },
+    "default": {
+      "value": {
+        "color": "{colour.greyBlue.tint.80}",
+        "width": "{border.1}",
+        "style": "solid"
+      },
+      "type": "border",
+      "description": "Default border for inputs, cards, resting interactive surfaces."
+    },
+    "strong": {
+      "value": {
+        "color": "{colour.grey.tint.65}",
+        "width": "{border.1}",
+        "style": "solid"
+      },
+      "type": "border",
+      "description": "Strong border for emphasised inputs and high-contrast separators."
+    },
+    "action-secondary": {
+      "value": {
+        "color": "{colour.purple.tint.80}",
+        "width": "{border.1}",
+        "style": "solid"
+      },
+      "type": "border",
+      "description": "Outline around secondary action buttons."
+    },
+    "danger": {
+      "value": {
+        "color": "{colour.system.warning.base}",
+        "width": "{border.1}",
+        "style": "solid"
+      },
+      "type": "border",
+      "description": "Border for invalid inputs and danger-state controls."
+    },
+    "success": {
+      "value": {
+        "color": "{colour.system.success.base}",
+        "width": "{border.1}",
+        "style": "solid"
+      },
+      "type": "border",
+      "description": "Border for successfully-validated inputs and success-state controls."
+    },
+    "input": {
+      "value": {
+        "color": "{focus.contrast}",
+        "width": "{border.1}",
+        "style": "solid"
+      },
+      "type": "border",
+      "description": "Inner border for keyboard-focused elements. Apply alongside focus.indicator and focus.ring."
+    }
+  },
+  "surface": {
+    "canvas": {
+      "value": "{colour.greyBlue.tint.97-5}",
+      "type": "color",
+      "description": "Default page background. Off-white with a faint purple cast."
+    },
+    "raised": {
+      "value": "{colour.neutral.white}",
+      "type": "color",
+      "description": "Surfaces above canvas — cards, modals, sheets, dropdowns."
+    },
+    "subtle": {
+      "value": "{colour.purple.tint.90}",
+      "type": "color",
+      "description": "Subtle purple-tinted surface for grouped content sections."
+    },
+    "muted": {
+      "value": "{colour.neutral.off-white}",
+      "type": "color",
+      "description": "Muted neutral surface — disabled-row backgrounds, code blocks."
+    },
+    "inverse": {
+      "value": "{colour.purple.base}",
+      "type": "color",
+      "description": "Inverse surface — dark backgrounds for footers, callouts. Pair with text.on-inverse."
+    },
+    "danger-subtle": {
+      "value": "{colour.system.warning.tint.95}",
+      "type": "color",
+      "description": "Pale red surface for inline error rows and danger callouts."
+    },
+    "info-subtle": {
+      "value": "{colour.system.link.tint.90}",
+      "type": "color",
+      "description": "Pale blue surface for informational message backgrounds."
+    },
+    "accent-blue": {
+      "value": "{colour.blue.tint.90}",
+      "type": "color",
+      "description": "Pale blue accent surface for decorative blocks."
+    },
+    "accent-coral": {
+      "value": "{colour.coral.tint.90}",
+      "type": "color",
+      "description": "Pale coral accent surface."
+    },
+    "accent-pale-blue": {
+      "value": "{colour.pale-blue.tint.90}",
+      "type": "color",
+      "description": "Pale-blue accent surface — softest blue option."
+    },
+    "accent-pink": {
+      "value": "{colour.pink.tint.90}",
+      "type": "color",
+      "description": "Pale pink accent surface."
+    }
+  },
+  "action": {
+    "primary": {
+      "rest": {
+        "value": "{colour.red.base}",
+        "type": "color",
+        "description": "Primary action — rest. Highest-emphasis button. Pair with text.on-primary."
+      },
+      "hover": {
+        "value": "{colour.red.shade.10}",
+        "type": "color",
+        "description": "Primary action — hover (10% darker)."
+      },
+      "pressed": {
+        "value": "{colour.red.shade.20}",
+        "type": "color",
+        "description": "Primary action — pressed (20% darker)."
+      }
+    },
+    "secondary": {
+      "rest": {
+        "value": "{colour.neutral.white}",
+        "type": "color",
+        "description": "Secondary action — rest. Mid-emphasis. Pair with text.on-secondary and border.action-secondary."
+      },
+      "hover": {
+        "value": "{colour.purple.tint.90}",
+        "type": "color",
+        "description": "Secondary action — hover (purple at 90% white)."
+      },
+      "pressed": {
+        "value": "{colour.purple.tint.80}",
+        "type": "color",
+        "description": "Secondary action — pressed (purple at 80% white)."
+      }
+    },
+    "tertiary": {
+      "rest": {
+        "value": "{colour.purple.base}",
+        "type": "color",
+        "description": "Tertiary action — rest. Low-emphasis dark button. Pair with text.on-tertiary."
+      },
+      "hover": {
+        "value": "{colour.purple.tint.10}",
+        "type": "color",
+        "description": "Tertiary action — hover (purple at 10% white, slightly lighter)."
+      },
+      "pressed": {
+        "value": "{colour.purple.shade.20}",
+        "type": "color",
+        "description": "Tertiary action — pressed (purple at 20% black, slightly darker)."
+      }
+    },
+    "finish": {
+      "rest": {
+        "value": "{colour.system.success.base}",
+        "type": "color",
+        "description": "Finish action — rest. Domain-specific button for completing a journey."
+      },
+      "hover": {
+        "value": "{colour.system.success.tint.20}",
+        "type": "color",
+        "description": "Finish action — hover."
+      },
+      "pressed": {
+        "value": "{colour.system.success.shade.20}",
+        "type": "color",
+        "description": "Finish action — pressed."
+      }
+    },
+    "danger": {
+      "rest": {
+        "value": "{colour.system.warning.base}",
+        "type": "color",
+        "description": "Destructive action — rest. Use for irreversible actions (delete, remove). Pair with text.on-danger."
+      },
+      "hover": {
+        "value": "#c0301c",
+        "type": "color",
+        "description": "Destructive action — hover. Manually defined darker step."
+      },
+      "pressed": {
+        "value": "#a02818",
+        "type": "color",
+        "description": "Destructive action — pressed. Manually defined darker step."
+      }
+    },
+    "disabled": {
+      "value": "{colour.neutral.off-white}",
+      "type": "color",
+      "description": "Disabled background applied to any action regardless of intent."
+    }
+  },
+  "text": {
+    "primary": {
+      "value": "{colour.grey.base}",
+      "type": "color",
+      "description": "Default text — body, headings, UI labels. Strongest hierarchy step."
+    },
+    "secondary": {
+      "value": "{colour.grey.tint.15}",
+      "type": "color",
+      "description": "De-emphasised text — supporting copy, metadata."
+    },
+    "tertiary": {
+      "value": "{colour.grey.tint.65}",
+      "type": "color",
+      "description": "Lowest-emphasis text — placeholder, very subtle metadata. Canonical owner; text.disabled aliases here."
+    },
+    "disabled": {
+      "value": "{text.tertiary}",
+      "type": "color",
+      "description": "Disabled text. Aliased to text.tertiary."
+    },
+    "brand": {
+      "value": "{colour.purple.base}",
+      "type": "color",
+      "description": "Branded text accent — themed callouts, signatures. Use sparingly."
+    },
+    "danger": {
+      "value": "{colour.system.warning.base}",
+      "type": "color",
+      "description": "Error / validation message text."
+    },
+    "success": {
+      "value": "{colour.system.success.base}",
+      "type": "color",
+      "description": "Success / confirmation message text."
+    },
+    "info": {
+      "value": "{colour.system.link.base}",
+      "type": "color",
+      "description": "Informational message text."
+    },
+    "on-primary": {
+      "value": "{colour.neutral.white}",
+      "type": "color",
+      "description": "Text on action.primary backgrounds."
+    },
+    "on-secondary": {
+      "value": "{colour.purple.base}",
+      "type": "color",
+      "description": "Text on action.secondary backgrounds."
+    },
+    "on-tertiary": {
+      "value": "{colour.neutral.white}",
+      "type": "color",
+      "description": "Text on action.tertiary backgrounds."
+    },
+    "on-finish": {
+      "value": "{colour.neutral.white}",
+      "type": "color",
+      "description": "Text on action.finish backgrounds."
+    },
+    "on-danger": {
+      "value": "{colour.neutral.white}",
+      "type": "color",
+      "description": "Text on action.danger backgrounds."
+    },
+    "on-inverse": {
+      "value": "{colour.neutral.white}",
+      "type": "color",
+      "description": "Text on surface.inverse backgrounds."
+    },
+    "on-focus": {
+      "value": "{focus.contrast}",
+      "type": "color",
+      "description": "Text on focus.indicator backgrounds."
+    }
+  },
+  "icon": {
+    "primary": {
+      "value": "{colour.grey.base}",
+      "type": "color",
+      "description": "Default icon colour — strongest hierarchy step."
+    },
+    "secondary": {
+      "value": "{colour.grey.tint.15}",
+      "type": "color",
+      "description": "De-emphasised icon — paired with secondary text."
+    },
+    "tertiary": {
+      "value": "{colour.grey.tint.65}",
+      "type": "color",
+      "description": "Lowest-emphasis icon — paired with tertiary text and placeholders."
+    },
+    "disabled": {
+      "value": "{text.tertiary}",
+      "type": "color",
+      "description": "Disabled icon. Aliased to text.tertiary."
+    },
+    "brand": {
+      "value": "{colour.purple.base}",
+      "type": "color",
+      "description": "Branded icon — themed graphics, brand moments."
+    },
+    "danger": {
+      "value": "{colour.system.warning.base}",
+      "type": "color",
+      "description": "Danger / error icon."
+    },
+    "success": {
+      "value": "{colour.system.success.base}",
+      "type": "color",
+      "description": "Success icon."
+    },
+    "info": {
+      "value": "{colour.system.link.base}",
+      "type": "color",
+      "description": "Info icon."
+    },
+    "size": {
+      "sm": {
+        "value": "size.24",
+        "type": "sizing"
+      },
+      "md": {
+        "value": "size.48",
+        "type": "sizing"
+      }
+    }
+  },
+  "link": {
+    "text": {
+      "default": {
+        "value": "{colour.system.link.base}",
+        "type": "color",
+        "description": "Default link text — unvisited links. Distinct role from feedback.info despite shared hex."
+      },
+      "visited": {
+        "value": "{colour.system.visited.base}",
+        "type": "color",
+        "description": "Visited link text."
+      },
+      "pressed": {
+        "value": "{colour.neutral.white}",
+        "type": "color",
+        "description": "Link text when pressed. Pair with link.bg.active-pressed or link.bg.visited-pressed."
+      },
+      "focus": {
+        "value": "{colour.grey.base}",
+        "type": "color",
+        "description": "Link text when keyboard-focused. Pair with link.bg.focus, border.focus, focus.ring."
+      },
+      "disabled": {
+        "value": "{text.tertiary}",
+        "type": "color",
+        "description": "Disabled link text. Aliased to text.tertiary."
+      }
+    },
+    "bg": {
+      "active-hover": {
+        "value": "{colour.system.link.tint.90}",
+        "type": "color",
+        "description": "Subtle blue tint behind unvisited link on hover."
+      },
+      "active-pressed": {
+        "value": "{colour.system.link.base}",
+        "type": "color",
+        "description": "Solid blue fill behind unvisited link when pressed."
+      },
+      "visited-hover": {
+        "value": "{colour.system.visited.tint.95}",
+        "type": "color",
+        "description": "Subtle purple tint behind visited link on hover."
+      },
+      "visited-pressed": {
+        "value": "{colour.system.visited.base}",
+        "type": "color",
+        "description": "Solid purple fill behind visited link when pressed."
+      },
+      "focus": {
+        "value": "{focus.indicator}",
+        "type": "color",
+        "description": "Yellow focus fill behind keyboard-focused link."
+      }
+    },
+    "underline": {
+      "offset": {
+        "value": "0.2em",
+        "type": "dimension",
+        "description": "Distance between text baseline and underline. CSS: text-underline-offset."
+      },
+      "thickness": {
+        "value": "0.0625rem",
+        "type": "dimension",
+        "description": "Underline stroke weight. CSS: text-decoration-thickness."
+      },
+      "color": {
+        "default": {
+          "value": "{link.text.default}",
+          "type": "color",
+          "description": "Underline colour for unvisited links at rest."
+        },
+        "visited": {
+          "value": "{link.text.visited}",
+          "type": "color",
+          "description": "Underline colour for visited links at rest."
+        },
+        "disabled": {
+          "value": "{text.tertiary}",
+          "type": "color",
+          "description": "Underline colour for disabled links."
+        }
+      }
+    }
+  },
+  "feedback": {
+    "success": {
+      "default": {
+        "value": "{colour.system.success.base}",
+        "type": "color",
+        "description": "Success state — confirmation, validation passes. Status indicator only."
+      },
+      "subtle": {
+        "value": "{colour.system.success.tint.90}",
+        "type": "color"
+      }
+    },
+    "danger": {
+      "default": {
+        "value": "{colour.system.warning.base}",
+        "type": "color",
+        "description": "Error / danger state. Status indicator only — for destructive button intents use action.danger."
+      },
+      "subtle": {
+        "value": "{colour.system.warning.tint.95}",
+        "type": "color",
+        "description": "Pale red background for inline error rows."
+      }
+    },
+    "warning": {
+      "default": {
+        "value": "{focus.indicator}",
+        "type": "color",
+        "description": "Warning state. Shares hex with focus.indicator — distinct role."
+      },
+      "subtle": {
+        "value": "{colour.system.focus.tint.10}",
+        "type": "color"
+      }
+    },
+    "info": {
+      "default": {
+        "value": "{colour.system.link.base}",
+        "type": "color",
+        "description": "Informational state."
+      },
+      "subtle": {
+        "value": "{colour.pale-blue.tint.90}",
+        "type": "color",
+        "description": "Pale blue background for informational message backgrounds."
+      }
+    }
+  },
+  "elevation": {
+    "compact": {
+      "rest": {
+        "value": "{shadow.shallow.1}",
+        "type": "boxShadow",
+        "description": "Compact raised surface at rest — cards, dropdowns, popovers."
+      },
+      "interactive": {
+        "value": "{shadow.deep.1}",
+        "type": "boxShadow",
+        "description": "Compact raised surface during interaction."
+      }
+    },
+    "broad": {
+      "rest": {
+        "value": "{shadow.shallow.2}",
+        "type": "boxShadow",
+        "description": "Broad raised surface at rest — modals, sheets."
+      },
+      "interactive": {
+        "value": "{shadow.deep.2}",
+        "type": "boxShadow",
+        "description": "Broad raised surface during interaction."
+      }
+    }
+  },
+  "focus": {
+    "indicator": {
+      "value": "{colour.system.focus.base}",
+      "type": "color",
+      "description": "Focus colour (yellow). Used for background fills and outer focus ring."
+    },
+    "contrast": {
+      "value": "{colour.purple.base}",
+      "type": "color",
+      "description": "Colour rendered on top of focus.indicator."
+    }
+  },
+  "typography": {
+    "display": {
+      "value": {
+        "fontFamily": "{font.family.brand}",
+        "fontSize": "{font.size.display}",
+        "lineHeight": "{leading.heading}"
+      },
+      "type": "typography",
+      "description": "Hero / display text. The only composition using font.family.brand by default."
+    },
+    "heading-x-large": {
+      "value": {
+        "fontSize": "{font.size.heading-x-large}",
+        "lineHeight": "{leading.heading}",
+        "fontFamily": "{font.family.brand-primitive}"
+      },
+      "type": "typography",
+      "description": "Top page heading (H1)."
+    },
+    "heading-large": {
+      "value": {
+        "fontFamily": "{font.family.body-primitive}",
+        "fontSize": "{font.size.heading-large}",
+        "lineHeight": "{leading.heading}",
+        "fontWeight": "{font.weight.bold}"
+      },
+      "type": "typography",
+      "description": "Major section headings (H2)."
+    },
+    "heading-medium": {
+      "value": {
+        "fontFamily": "{font.family.body-primitive}",
+        "fontSize": "{font.size.heading-medium}",
+        "lineHeight": "{leading.heading}",
+        "fontWeight": "{font.weight.bold}"
+      },
+      "type": "typography",
+      "description": "Section headings (H3)."
+    },
+    "heading-small": {
+      "value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.bold}",
+        "fontSize": "{font.size.heading-small}",
+        "lineHeight": "{leading.heading}"
+      },
+      "type": "typography",
+      "description": "Subsection headings (H4)."
+    },
+    "body": {
+      "value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "{font.size.body}",
+        "lineHeight": "{leading.body}"
+      },
+      "type": "typography",
+      "description": "Lead paragraph beneath a heading."
+    },
+    "body-small": {
+      "value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "{font.size.body-sm}",
+        "lineHeight": "{leading.body}"
+      },
+      "type": "typography",
+      "description": "Dense UI text."
+    },
+    "caption": {
+      "value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "{font.size.caption}",
+        "lineHeight": "{leading.caption}"
+      },
+      "type": "typography",
+      "description": "Image captions, helper text, small labels."
+    },
+    "micro": {
+      "value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "{font.size.micro}",
+        "lineHeight": "{leading.caption}"
+      },
+      "type": "typography",
+      "description": "Legal text, footnotes."
+    },
+    "link": {
+      "value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.bold}",
+        "fontSize": "{font.size.body}",
+        "lineHeight": "{leading.body}"
+      },
+      "type": "typography",
+      "description": "Type composition for link text. textDecoration applied at component level via link.underline.* tokens."
+    }
+  }
+}

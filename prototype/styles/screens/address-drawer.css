@@ -1,0 +1,250 @@
+.screen--address-drawer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 402px;
+  min-height: 874px;
+  margin: 0 auto;
+  background: var(--surface-raised);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 4%);
+  overflow-y: visible;
+}
+
+.address-drawer-header {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 60px;
+  padding: 0 var(--spacing-density-md);
+  background: var(--surface-raised);
+}
+
+.address-drawer-header__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-24);
+  height: var(--size-24);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.address-drawer-header__close-icon {
+  display: block;
+  width: var(--size-24);
+  height: var(--size-24);
+  background-color: var(--action-primary-rest);
+  mask: url("../../assets/icons/close.svg") center / contain no-repeat;
+  -webkit-mask: url("../../assets/icons/close.svg") center / contain no-repeat;
+}
+
+.address-drawer-manual-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-md);
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0 var(--spacing-density-md);
+  overflow: auto;
+}
+
+.address-drawer-manual-heading {
+  margin: 0;
+  font-family: var(--font-family-brand), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-large);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+  color: var(--text-brand);
+}
+
+.screen--address-drawer-billing .text-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-density-sm);
+  width: 100%;
+}
+
+.screen--address-drawer-billing .text-input-field__label-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.screen--address-drawer-billing .text-input-field__label {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-small);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+  color: var(--text-primary);
+}
+
+.screen--address-drawer-billing .text-input-field__optional {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-secondary);
+}
+
+
+.address-drawer-search-panel {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--spacing-stack-sm);
+  min-height: 0;
+  padding: var(--spacing-density-md) var(--spacing-density-md) var(--spacing-density-xl);
+}
+
+.screen--address-drawer[data-state="address-results"] .address-drawer-address-panel {
+  flex: 0 0 auto;
+  min-height: 0;
+  padding-top: 0;
+}
+
+.screen--address-drawer .address-search-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-density-sm);
+  width: 100%;
+}
+
+.screen--address-drawer .address-search-field__label {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-small);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+  color: var(--text-primary);
+}
+
+.screen--address-drawer .address-search-field__helper {
+  margin: 0;
+  min-height: var(--size-24);
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+}
+
+.screen--address-drawer .link-button {
+  align-self: flex-start;
+  padding: var(--spacing-density-sm) 0;
+  border: 0;
+  border-radius: var(--radii-2);
+  background: transparent;
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-body);
+  color: var(--link-text-default);
+  cursor: pointer;
+}
+
+.address-drawer-results {
+  width: 100%;
+}
+
+.address-drawer-address-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: var(--spacing-stack-sm);
+}
+
+.address-drawer-address-panel[hidden] {
+  display: none !important;
+}
+
+.address-drawer-results[hidden] {
+  display: none !important;
+}
+
+.address-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: var(--border-action-secondary);
+  border-radius: var(--radius-md);
+  background: var(--surface-canvas);
+  overflow: clip;
+}
+
+.address-result-row {
+  display: flex;
+  gap: var(--spacing-stack-sm);
+  align-items: flex-start;
+  width: 100%;
+  padding: var(--spacing-density-md);
+  border: 0;
+  border-bottom: var(--border-action-secondary);
+  background: transparent;
+  text-align: left;
+  cursor: default;
+}
+
+.address-result-row:last-child {
+  border-bottom: 0;
+}
+
+.address-result-row--plain,
+.address-result-row--group {
+  background: transparent;
+}
+
+.address-result-row--back {
+  background: var(--surface-raised);
+}
+
+.address-result-row--back .address-result-row__text {
+  color: var(--text-primary);
+}
+
+.address-result-row--navigable,
+.address-result-row--back,
+.address-result-row--selectable {
+  cursor: pointer;
+}
+
+.address-result-row__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+
+.address-result-row__title,
+.address-result-row__text {
+  margin: 0;
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+}
+
+.address-result-row__subtitle {
+  margin: 0;
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+}
+
+.address-result-row__arrow {
+  display: block;
+  flex-shrink: 0;
+  width: var(--size-24);
+  height: var(--size-24);
+  background-color: var(--action-primary-rest);
+  mask: url("../../assets/icons/chevron-right.svg") center / contain no-repeat;
+  -webkit-mask: url("../../assets/icons/chevron-right.svg") center / contain no-repeat;
+}
+
+.address-result-row__arrow--back {
+  transform: rotate(180deg);
+}
+

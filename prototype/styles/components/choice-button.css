@@ -1,0 +1,109 @@
+/**
+ * Pattern Library — Buttons/Choice (State × illustration slot)
+ * spacing/density/md padding; spacing/stack/md gap; radius/md
+ * Focus ring space is reserved in all states (transparent borders); selected/focus only change colors.
+ */
+
+.choice-btn {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: var(--border-4) solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--surface-muted);
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.choice-btn:disabled {
+  cursor: not-allowed;
+}
+
+.choice-btn__surface {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-stack-md);
+  width: 100%;
+  min-width: 0;
+  padding: calc(var(--spacing-density-md) - var(--border-4) - var(--border-2));
+  border: var(--border-2) solid var(--action-secondary-hover);
+  border-radius: var(--radius-md);
+  background: var(--surface-muted);
+  box-sizing: border-box;
+}
+
+.choice-btn--compact .choice-btn__surface {
+  padding: calc(var(--spacing-stack-sm) - var(--border-4) - var(--border-2))
+    calc(var(--spacing-density-md) - var(--border-4) - var(--border-2))
+    calc(var(--spacing-stack-sm) - var(--border-4) - var(--border-2))
+    calc(var(--spacing-density-sm) - var(--border-4) - var(--border-2));
+}
+
+.choice-btn__illustration {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+}
+
+.choice-btn__content {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: var(--spacing-stack-sm);
+  min-width: 0;
+}
+
+.choice-btn__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.choice-btn__title {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-medium);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-heading);
+  color: var(--text-primary);
+}
+
+.choice-btn__dimensions,
+.choice-btn__weight {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+}
+
+/* Selected / focus — outer yellow ring + inner contrast frame */
+
+.choice-btn[aria-pressed="true"],
+.choice-btn--selected,
+.choice-btn:focus-visible:not(:disabled) {
+  background: var(--surface-raised);
+  border-color: var(--focus-indicator);
+}
+
+.choice-btn[aria-pressed="true"] .choice-btn__surface,
+.choice-btn--selected .choice-btn__surface,
+.choice-btn:focus-visible:not(:disabled) .choice-btn__surface {
+  border-color: var(--focus-contrast);
+  background: var(--surface-raised);
+}
+
+/* Disabled */
+
+.choice-btn:disabled .choice-btn__title,
+.choice-btn:disabled .choice-btn__dimensions,
+.choice-btn:disabled .choice-btn__weight {
+  color: var(--text-disabled);
+}
+
+/* Focus */
+
+.choice-btn:focus {
+  outline: none;
+}

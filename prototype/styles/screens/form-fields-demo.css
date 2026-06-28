@@ -1,0 +1,91 @@
+.screen--form-fields-demo {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: var(--surface-canvas);
+}
+
+.form-fields-demo__intro {
+  padding: var(--spacing-density-lg) var(--spacing-density-md) var(--spacing-density-md);
+}
+
+.form-fields-demo__title {
+  margin: 0 0 var(--spacing-density-sm);
+  font-family: var(--font-family-brand), var(--font-family-body), sans-serif;
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-heading);
+  color: var(--text-brand);
+}
+
+.form-fields-demo__copy {
+  margin: 0;
+  font-size: var(--font-size-body);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+}
+
+.form-fields-demo__status {
+  margin: var(--spacing-density-md) 0 0;
+  font-size: var(--font-size-body-sm);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+}
+
+.form-fields-demo__shell {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  max-width: 402px;
+  margin: 0 auto;
+}
+
+.form-fields-demo__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-density-lg);
+  padding: 0 var(--spacing-density-md) var(--spacing-density-lg);
+}
+
+.form-fields-demo__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-density-sm);
+}
+
+.form-fields-demo__heading {
+  margin: 0;
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-fields-demo__stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-md);
+}
+
+.form-fields-demo__control-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-density-md);
+}
+
+.form-fields-demo__control-sample {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-density-sm);
+}
+
+.form-fields-demo__control-label {
+  font-size: var(--font-size-caption);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+}

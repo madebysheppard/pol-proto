@@ -1,0 +1,189 @@
+/**
+ * Pattern Library — Buttons/Button (Intent × State × Medium)
+ * Tokens: button/padding/vertical → --size-16; spacing/button/gap → --spacing-density-sm
+ * Focus ring space is reserved in all states (transparent borders); focus only changes colors.
+ */
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: var(--size-56);
+  margin: 0;
+  padding: 0;
+  border: var(--border-4) solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  line-height: var(--leading-body);
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn--inline {
+  width: fit-content;
+}
+
+.btn--icon-only {
+  width: var(--size-56);
+  min-width: var(--size-56);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn__content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-density-sm);
+  width: 100%;
+  min-height: calc(var(--size-56) - var(--border-4) * 2);
+  padding: calc(var(--size-16) - var(--border-4) - var(--border-2))
+    calc(var(--size-24) - var(--border-4) - var(--border-2));
+  border: var(--border-2) solid transparent;
+  border-radius: var(--radius-sm);
+  box-sizing: border-box;
+}
+
+.btn--icon-leading .btn__content {
+  padding-left: calc(var(--size-16) - var(--border-4) - var(--border-2));
+}
+
+.btn--icon-trailing .btn__content {
+  padding-right: calc(var(--size-16) - var(--border-4) - var(--border-2));
+}
+
+.btn--icon-only .btn__content {
+  padding: calc(var(--size-16) - var(--border-4) - var(--border-2));
+}
+
+.btn__label {
+  white-space: nowrap;
+}
+
+.btn__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__icon-glyph {
+  width: var(--size-24);
+  height: var(--size-24);
+  background-color: currentColor;
+  mask: var(--btn-icon-src) center / contain no-repeat;
+  -webkit-mask: var(--btn-icon-src) center / contain no-repeat;
+}
+
+/* Primary */
+
+.btn--primary:not(:disabled) .btn__content {
+  background: var(--action-primary-rest);
+  box-shadow: var(--elevation-compact-rest);
+  color: var(--text-on-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.btn--primary:not(:disabled):hover .btn__content {
+  background: var(--action-primary-hover);
+  box-shadow: var(--elevation-compact-interactive);
+}
+
+.btn--primary:not(:disabled):active .btn__content {
+  background: var(--action-primary-pressed);
+  box-shadow: none;
+}
+
+/* Secondary */
+
+.btn--secondary:not(:disabled) .btn__content {
+  background: var(--action-secondary-rest);
+  box-shadow:
+    var(--elevation-compact-interactive),
+    inset 0 0 0 var(--border-2) var(--action-secondary-pressed);
+  color: var(--text-on-secondary);
+  font-weight: var(--font-weight-bold);
+}
+
+.btn--secondary:not(:disabled):hover .btn__content {
+  background: var(--action-secondary-hover);
+  box-shadow: inset 0 0 0 var(--border-2) var(--action-secondary-pressed);
+}
+
+.btn--secondary:not(:disabled):active .btn__content {
+  background: var(--action-secondary-pressed);
+  box-shadow: inset 0 0 0 var(--border-2) var(--action-secondary-pressed);
+}
+
+/* Success (Finish intent) */
+
+.btn--success:not(:disabled) .btn__content {
+  background: var(--action-finish-rest);
+  box-shadow: var(--elevation-compact-rest);
+  color: var(--text-on-finish);
+  font-weight: var(--font-weight-bold);
+}
+
+.btn--success:not(:disabled):hover .btn__content {
+  background: var(--action-finish-hover);
+  box-shadow: var(--elevation-compact-interactive);
+}
+
+.btn--success:not(:disabled):active .btn__content {
+  background: var(--action-finish-pressed);
+  box-shadow: none;
+}
+
+/* Tertiary */
+
+.btn--tertiary:not(:disabled) .btn__content {
+  background: var(--action-tertiary-rest);
+  box-shadow: var(--elevation-compact-rest);
+  color: var(--text-on-tertiary);
+  font-weight: var(--font-weight-bold);
+}
+
+.btn--tertiary:not(:disabled):hover .btn__content {
+  background: var(--action-tertiary-hover);
+  box-shadow: var(--elevation-compact-interactive);
+}
+
+.btn--tertiary:not(:disabled):active .btn__content {
+  background: var(--action-tertiary-pressed);
+  box-shadow: none;
+}
+
+/* Disabled (all intents) */
+
+.btn:disabled .btn__content {
+  background: var(--action-disabled);
+  box-shadow: none;
+  color: var(--text-disabled);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Focus — outer yellow ring + inner yellow frame */
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:focus-visible:not(:disabled) {
+  border-color: var(--focus-indicator);
+}
+
+.btn:focus-visible:not(:disabled) .btn__content {
+  border-color: var(--focus-contrast);
+  background: var(--focus-indicator);
+  box-shadow: none;
+  color: var(--text-on-focus);
+  font-weight: var(--font-weight-semibold);
+}

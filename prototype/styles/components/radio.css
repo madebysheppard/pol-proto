@@ -1,0 +1,184 @@
+/**
+ * Pattern Library — Forms/Radio, Forms/Radio option, Forms/Radio group
+ * Interaction states are CSS-managed (:disabled, :focus-within, aria-invalid).
+ */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Shared control */
+
+.radio-control {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--icon-primary);
+  border-radius: 50%;
+  background: var(--surface-raised);
+}
+
+.radio-control__dot {
+  display: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--text-brand);
+}
+
+/* Forms/Radio — standalone */
+
+.forms-radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.forms-radio__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.forms-radio__input:checked + .radio-control .radio-control__dot {
+  display: block;
+}
+
+.forms-radio:focus-within .radio-control {
+  outline: 4px solid var(--focus-indicator);
+  outline-offset: 0;
+}
+
+.forms-radio--disabled:not(:has(.forms-radio__input:checked)) .radio-control {
+  border-color: transparent;
+  background: var(--action-disabled);
+}
+
+.forms-radio--disabled:has(.forms-radio__input:checked) {
+  opacity: 0.4;
+}
+
+.forms-radio--error:not(:has(.forms-radio__input:checked)) .radio-control {
+  border-color: var(--action-danger-rest);
+  background: var(--feedback-danger-subtle);
+}
+
+.forms-radio--error:has(.forms-radio__input:checked) .radio-control {
+  border-color: var(--action-danger-rest);
+  background: var(--surface-raised);
+}
+
+.forms-radio--error:has(.forms-radio__input:checked) .radio-control__dot {
+  background: var(--action-danger-rest);
+}
+
+/* Forms/Radio option */
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-stack-sm);
+  min-height: 76px;
+  padding: var(--size-16);
+  cursor: pointer;
+}
+
+.radio-option__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.radio-option__input:checked + .radio-control .radio-control__dot {
+  display: block;
+}
+
+.radio-option:focus-within .radio-control {
+  outline: 4px solid var(--focus-indicator);
+  outline-offset: 0;
+}
+
+.radio-option__label {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+}
+
+.radio-option--disabled {
+  cursor: default;
+}
+
+.radio-option--disabled:not(:has(.radio-option__input:checked)) .radio-control {
+  border-color: transparent;
+  background: var(--action-disabled);
+}
+
+.radio-option--disabled:has(.radio-option__input:checked) .radio-control {
+  opacity: 0.4;
+}
+
+.radio-option--error .radio-option__label {
+  color: var(--text-danger);
+}
+
+.radio-option--error:not(:has(.radio-option__input:checked)) .radio-control {
+  border-color: var(--action-danger-rest);
+  background: var(--feedback-danger-subtle);
+}
+
+.radio-option--error:has(.radio-option__input:checked) .radio-control {
+  border-color: var(--action-danger-rest);
+  background: var(--surface-raised);
+}
+
+.radio-option--error:has(.radio-option__input:checked) .radio-control__dot {
+  background: var(--action-danger-rest);
+}
+
+/* Forms/Radio group */
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--action-secondary-pressed);
+  border-radius: var(--radius-md);
+  background: var(--surface-canvas);
+}
+
+.radio-divider {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: var(--action-secondary-pressed);
+}

@@ -1,0 +1,79 @@
+.screen--delivery-address {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 402px;
+  min-height: 874px;
+  margin: 0 auto;
+  background: var(--surface-raised);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 4%);
+}
+
+
+
+.delivery-address-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--spacing-stack-lg);
+  min-height: 0;
+  padding: var(--spacing-density-xl) var(--spacing-density-md);
+}
+
+.delivery-address-heading {
+  margin: 0;
+  width: 100%;
+  max-width: 402px;
+  font-family: var(--font-family-brand), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-x-large);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+  color: var(--text-brand);
+}
+
+.delivery-address-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-density-sm);
+  width: 100%;
+}
+
+.address-search-field__label {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-small);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+  color: var(--text-primary);
+}
+
+.address-search-field__helper {
+  margin: 0;
+  min-height: var(--size-24);
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+}
+
+.screen--delivery-address .link-button {
+  align-self: flex-start;
+  padding: var(--spacing-density-sm) 0;
+  border: 0;
+  border-radius: var(--radii-2);
+  background: transparent;
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-body);
+  color: var(--link-text-default);
+  cursor: pointer;
+}
+
+.delivery-address-footer {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: stretch;
+  padding: var(--spacing-stack-md) var(--spacing-density-md);
+}

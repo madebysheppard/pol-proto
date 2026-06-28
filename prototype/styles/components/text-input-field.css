@@ -1,0 +1,350 @@
+/**
+ * Pattern Library — Forms/input (State × prefix/suffix)
+ * Interaction states are CSS-managed (:disabled, :focus, :read-only, aria-invalid).
+ * Filled matches Default — no separate styling required.
+ */
+
+.text-input-field,
+.address-search-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-density-sm);
+  width: 100%;
+}
+
+/* Forms/Text input — label, helper, error chrome */
+
+.text-input-field__label-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  width: 100%;
+  overflow: clip;
+}
+
+.text-input-field__label {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-small);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+  color: var(--text-primary);
+}
+
+.text-input-field__optional {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-heading);
+  color: var(--text-secondary);
+}
+
+.text-input-field:has(.text-input-field__input:disabled) .text-input-field__label,
+.text-input-field:has(.text-input-field__input:disabled) .text-input-field__optional,
+.text-input-field:has(.text-input-field__input:disabled) .text-input-field__description {
+  color: var(--text-disabled);
+}
+
+.text-input-field__error-row {
+  display: flex;
+  gap: var(--size-8);
+  align-items: center;
+  width: 100%;
+}
+
+.text-input-field__error-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--size-24);
+  height: var(--size-24);
+  color: var(--icon-danger);
+}
+
+.text-input-field__error-text {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-danger);
+}
+
+.text-input-field__description {
+  margin: 0;
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+}
+
+/* Bare Forms/input wrapper (createInputElement) */
+
+.forms-input {
+  width: 100%;
+}
+
+.text-input-field__input-wrap,
+.address-search-field__focus-wrap {
+  border-radius: var(--radius-md);
+  /* Outer focus ring — outside the 56px field (Figma strokeAlign: OUTSIDE); no layout impact */
+  box-shadow: 0 0 0 var(--border-4) transparent;
+}
+
+.text-input-field__input,
+.address-search-field__input {
+  width: 100%;
+  height: var(--size-56);
+  padding: var(--size-16);
+  border: var(--border-2) solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  box-shadow: inset 0 0 0 var(--border-input-width) var(--border-input-color);
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+  box-sizing: border-box;
+}
+
+.text-input-field__input::placeholder,
+.address-search-field__input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Disabled (State=Disabled) — no border; label only is muted */
+
+.text-input-field__input:disabled,
+.address-search-field__input:disabled {
+  border: var(--border-2) solid transparent;
+  background: var(--action-disabled);
+  box-shadow: none;
+  color: var(--text-primary);
+  cursor: not-allowed;
+}
+
+/* Read-only (State=Read-only) */
+
+.text-input-field__input:read-only,
+.address-search-field__input:read-only {
+  border: var(--border-2) solid transparent;
+  background: var(--action-disabled);
+  box-shadow: none;
+  color: var(--text-secondary);
+  cursor: default;
+}
+
+/* Error (State=Error) */
+
+.text-input-field--error .text-input-field__input,
+.text-input-field__input[aria-invalid="true"],
+.address-search-field--error .address-search-field__input,
+.address-search-field__input[aria-invalid="true"] {
+  border: var(--border-2) solid transparent;
+  background: var(--feedback-danger-subtle);
+  box-shadow: inset 0 0 0 var(--border-danger-width) var(--border-danger-color);
+}
+
+/* Focus (State=Focused) — outer yellow ring + inner contrast border */
+
+.text-input-field__input:focus,
+.address-search-field__input:focus {
+  outline: none;
+}
+
+.text-input-field__input-wrap:focus-within,
+.address-search-field__focus-wrap:focus-within,
+.address-search-field--focused .address-search-field__focus-wrap {
+  box-shadow: 0 0 0 var(--border-4) var(--focus-indicator);
+}
+
+.text-input-field__input-wrap:focus-within .text-input-field__input,
+.address-search-field__focus-wrap:focus-within .address-search-field__input,
+.address-search-field--focused .address-search-field__focus-wrap .address-search-field__input {
+  border-color: var(--focus-contrast);
+  box-shadow: none;
+}
+
+/* Error-Focussed — outer yellow ring + inner danger border */
+
+.text-input-field--error .text-input-field__input-wrap:focus-within .text-input-field__input,
+.text-input-field__input-wrap:focus-within .text-input-field__input[aria-invalid="true"],
+.address-search-field--error .address-search-field__focus-wrap:focus-within .address-search-field__input,
+.address-search-field__focus-wrap:focus-within .address-search-field__input[aria-invalid="true"],
+.address-search-field--error.address-search-field--focused .address-search-field__focus-wrap .address-search-field__input {
+  border-color: var(--action-danger-rest);
+  background: var(--feedback-danger-subtle);
+  box-shadow: none;
+}
+
+.screen--payment .text-input-field__input-wrap:focus-within {
+  border-radius: 0;
+}
+
+/* Prefix + suffix variants (Forms/input with Has prefix / Has suffix) */
+
+.text-input-field--has-prefix .text-input-field__box,
+.text-input-field--has-suffix .text-input-field__box,
+.forms-input.text-input-field--has-prefix .text-input-field__box,
+.forms-input.text-input-field--has-suffix .text-input-field__box {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: var(--size-56);
+  min-height: var(--size-56);
+  border: var(--border-2) solid transparent;
+  box-shadow: inset 0 0 0 var(--border-input-width) var(--border-input-color);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.text-input-field--has-prefix .text-input-field__input,
+.text-input-field--has-suffix .text-input-field__input,
+.forms-input.text-input-field--has-prefix .text-input-field__input,
+.forms-input.text-input-field--has-suffix .text-input-field__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: auto;
+  padding: var(--size-16);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.text-input-field--has-prefix .text-input-field__prefix,
+.forms-input.text-input-field--has-prefix .text-input-field__prefix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0 var(--size-16);
+  border-right: var(--border-input);
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+}
+
+.text-input-field--has-suffix .text-input-field__suffix,
+.forms-input.text-input-field--has-suffix .text-input-field__suffix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0 var(--size-16);
+  border-left: var(--border-input);
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+}
+
+.text-input-field--has-prefix .text-input-field__input-wrap:focus-within .text-input-field__box,
+.text-input-field--has-suffix .text-input-field__input-wrap:focus-within .text-input-field__box,
+.forms-input.text-input-field--has-prefix .text-input-field__input-wrap:focus-within .text-input-field__box,
+.forms-input.text-input-field--has-suffix .text-input-field__input-wrap:focus-within .text-input-field__box {
+  border-color: var(--focus-contrast);
+  box-shadow: none;
+}
+
+.text-input-field--has-prefix .text-input-field__input-wrap:focus-within .text-input-field__input,
+.text-input-field--has-suffix .text-input-field__input-wrap:focus-within .text-input-field__input,
+.forms-input.text-input-field--has-prefix .text-input-field__input-wrap:focus-within .text-input-field__input,
+.forms-input.text-input-field--has-suffix .text-input-field__input-wrap:focus-within .text-input-field__input {
+  border: 0;
+  box-shadow: none;
+}
+
+.text-input-field--has-prefix .text-input-field__input:disabled ~ .text-input-field__prefix,
+.text-input-field--has-suffix .text-input-field__input:disabled ~ .text-input-field__suffix,
+.text-input-field--has-prefix .text-input-field__input:read-only ~ .text-input-field__prefix,
+.text-input-field--has-suffix .text-input-field__input:read-only ~ .text-input-field__suffix,
+.forms-input.text-input-field--has-prefix .text-input-field__input:disabled ~ .text-input-field__prefix,
+.forms-input.text-input-field--has-suffix .text-input-field__input:disabled ~ .text-input-field__suffix,
+.forms-input.text-input-field--has-prefix .text-input-field__input:read-only ~ .text-input-field__prefix,
+.forms-input.text-input-field--has-suffix .text-input-field__input:read-only ~ .text-input-field__suffix {
+  border-color: transparent;
+  color: var(--text-secondary);
+}
+
+.text-input-field--has-prefix .text-input-field__input:disabled ~ .text-input-field__prefix,
+.text-input-field--has-suffix .text-input-field__input:disabled ~ .text-input-field__suffix,
+.forms-input.text-input-field--has-prefix .text-input-field__input:disabled ~ .text-input-field__prefix,
+.forms-input.text-input-field--has-suffix .text-input-field__input:disabled ~ .text-input-field__suffix {
+  color: var(--text-disabled);
+}
+
+.text-input-field--has-prefix .text-input-field__input:disabled,
+.text-input-field--has-suffix .text-input-field__input:disabled,
+.text-input-field--has-prefix .text-input-field__input:read-only,
+.text-input-field--has-suffix .text-input-field__input:read-only,
+.forms-input.text-input-field--has-prefix .text-input-field__input:disabled,
+.forms-input.text-input-field--has-suffix .text-input-field__input:disabled,
+.forms-input.text-input-field--has-prefix .text-input-field__input:read-only,
+.forms-input.text-input-field--has-suffix .text-input-field__input:read-only {
+  background: transparent;
+}
+
+.text-input-field--has-prefix:has(.text-input-field__input:disabled) .text-input-field__box,
+.text-input-field--has-suffix:has(.text-input-field__input:disabled) .text-input-field__box,
+.text-input-field--has-prefix:has(.text-input-field__input:read-only) .text-input-field__box,
+.text-input-field--has-suffix:has(.text-input-field__input:read-only) .text-input-field__box,
+.forms-input.text-input-field--has-prefix:has(.text-input-field__input:disabled) .text-input-field__box,
+.forms-input.text-input-field--has-suffix:has(.text-input-field__input:disabled) .text-input-field__box,
+.forms-input.text-input-field--has-prefix:has(.text-input-field__input:read-only) .text-input-field__box,
+.forms-input.text-input-field--has-suffix:has(.text-input-field__input:read-only) .text-input-field__box {
+  background: var(--action-disabled);
+  border-color: transparent;
+}
+
+.text-input-field--has-prefix.text-input-field--error .text-input-field__box,
+.text-input-field--has-suffix.text-input-field--error .text-input-field__box,
+.text-input-field--has-prefix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__box,
+.text-input-field--has-suffix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__box,
+.forms-input.text-input-field--has-prefix.text-input-field--error .text-input-field__box,
+.forms-input.text-input-field--has-suffix.text-input-field--error .text-input-field__box,
+.forms-input.text-input-field--has-prefix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__box,
+.forms-input.text-input-field--has-suffix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__box {
+  border: var(--border-2) solid transparent;
+  background: var(--feedback-danger-subtle);
+  box-shadow: inset 0 0 0 var(--border-danger-width) var(--border-danger-color);
+}
+
+.text-input-field--has-prefix.text-input-field--error .text-input-field__input-wrap:focus-within .text-input-field__box,
+.text-input-field--has-suffix.text-input-field--error .text-input-field__input-wrap:focus-within .text-input-field__box,
+.text-input-field--has-prefix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__input-wrap:focus-within .text-input-field__box,
+.text-input-field--has-suffix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__input-wrap:focus-within .text-input-field__box,
+.forms-input.text-input-field--has-prefix.text-input-field--error .text-input-field__input-wrap:focus-within .text-input-field__box,
+.forms-input.text-input-field--has-suffix.text-input-field--error .text-input-field__input-wrap:focus-within .text-input-field__box,
+.forms-input.text-input-field--has-prefix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__input-wrap:focus-within .text-input-field__box,
+.forms-input.text-input-field--has-suffix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__input-wrap:focus-within .text-input-field__box {
+  border-color: var(--action-danger-rest);
+  background: var(--feedback-danger-subtle);
+  box-shadow: none;
+}
+
+.text-input-field--has-prefix.text-input-field--error .text-input-field__prefix,
+.text-input-field--has-suffix.text-input-field--error .text-input-field__suffix,
+.text-input-field--has-prefix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__prefix,
+.text-input-field--has-suffix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__suffix,
+.forms-input.text-input-field--has-prefix.text-input-field--error .text-input-field__prefix,
+.forms-input.text-input-field--has-suffix.text-input-field--error .text-input-field__suffix,
+.forms-input.text-input-field--has-prefix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__prefix,
+.forms-input.text-input-field--has-suffix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__suffix {
+  border-color: var(--border-danger-color);
+}
+
+.text-input-field--has-prefix.text-input-field--error .text-input-field__input-wrap:focus-within .text-input-field__prefix,
+.text-input-field--has-suffix.text-input-field--error .text-input-field__input-wrap:focus-within .text-input-field__suffix,
+.text-input-field--has-prefix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__input-wrap:focus-within .text-input-field__prefix,
+.text-input-field--has-suffix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__input-wrap:focus-within .text-input-field__suffix,
+.forms-input.text-input-field--has-prefix.text-input-field--error .text-input-field__input-wrap:focus-within .text-input-field__prefix,
+.forms-input.text-input-field--has-suffix.text-input-field--error .text-input-field__input-wrap:focus-within .text-input-field__suffix,
+.forms-input.text-input-field--has-prefix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__input-wrap:focus-within .text-input-field__prefix,
+.forms-input.text-input-field--has-suffix:has(.text-input-field__input[aria-invalid="true"]) .text-input-field__input-wrap:focus-within .text-input-field__suffix {
+  border-color: var(--action-danger-rest);
+}

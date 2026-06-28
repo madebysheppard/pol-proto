@@ -1,0 +1,140 @@
+:root {
+  --transition-duration-slide: 240ms;
+  --transition-duration-fade: 200ms;
+  --transition-duration-sheet: 280ms;
+  --transition-ease-android-standard: cubic-bezier(0.2, 0, 0, 1);
+  --transition-ease-android-emphasized: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-duration-slide: 1ms;
+    --transition-duration-fade: 1ms;
+  }
+}
+
+@keyframes screen-enter-from-right {
+  from {
+    transform: translateX(20px);
+    opacity: 0.94;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes screen-exit-to-left {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-12px);
+    opacity: 0.94;
+  }
+}
+
+@keyframes screen-enter-from-left {
+  from {
+    transform: translateX(-20px);
+    opacity: 0.94;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes screen-exit-to-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(12px);
+    opacity: 0.94;
+  }
+}
+
+@keyframes screen-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes screen-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes sheet-enter-from-bottom {
+  from {
+    transform: translateY(44px);
+    opacity: 0.96;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sheet-exit-to-bottom {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(44px);
+    opacity: 0.96;
+  }
+}
+
+html[data-transition="slide-forward"]::view-transition-old(root) {
+  animation: screen-exit-to-left var(--transition-duration-slide) var(--transition-ease-android-standard);
+}
+
+html[data-transition="slide-forward"]::view-transition-new(root) {
+  animation: screen-enter-from-right var(--transition-duration-slide) var(--transition-ease-android-standard);
+}
+
+html[data-transition="slide-back"]::view-transition-old(root) {
+  animation: screen-exit-to-right var(--transition-duration-slide) var(--transition-ease-android-standard);
+}
+
+html[data-transition="slide-back"]::view-transition-new(root) {
+  animation: screen-enter-from-left var(--transition-duration-slide) var(--transition-ease-android-standard);
+}
+
+html[data-transition="fade"]::view-transition-old(root) {
+  animation: screen-fade-out var(--transition-duration-fade) ease-out;
+}
+
+html[data-transition="fade"]::view-transition-new(root) {
+  animation: screen-fade-in var(--transition-duration-fade) ease-out;
+}
+
+html[data-transition="sheet-up"]::view-transition-old(root) {
+  animation: screen-fade-out var(--transition-duration-fade) ease-out;
+}
+
+html[data-transition="sheet-up"]::view-transition-new(root) {
+  animation: sheet-enter-from-bottom var(--transition-duration-sheet)
+    var(--transition-ease-android-emphasized);
+}
+
+html[data-transition="sheet-down"]::view-transition-old(root) {
+  animation: sheet-exit-to-bottom var(--transition-duration-sheet)
+    var(--transition-ease-android-emphasized);
+}
+
+html[data-transition="sheet-down"]::view-transition-new(root) {
+  animation: screen-fade-in var(--transition-duration-fade) ease-out;
+}

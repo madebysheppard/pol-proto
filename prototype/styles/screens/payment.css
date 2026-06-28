@@ -1,0 +1,162 @@
+.screen--payment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 402px;
+  min-height: 874px;
+  margin: 0 auto;
+  background: var(--surface-raised);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 4%);
+}
+
+
+
+.payment-details-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  height: 60px;
+  padding: 0 var(--spacing-density-md);
+  background: #3b3d48;
+}
+
+.payment-details-header__title {
+  margin: 0;
+  flex: 1 1 0;
+  min-width: 0;
+  font-family: var(--font-family-brand), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-x-large);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+  color: var(--action-disabled);
+}
+
+.payment-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--spacing-stack-md);
+  align-items: stretch;
+  min-height: 0;
+  padding: var(--size-32) var(--spacing-density-md) var(--spacing-stack-md);
+}
+
+.payment-apple-pay {
+  display: flex;
+  gap: var(--size-8);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: 0;
+  border-radius: var(--size-8);
+  background: var(--colour-neutral-black);
+  cursor: pointer;
+}
+
+.payment-apple-pay__text {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-x-large);
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+  letter-spacing: 0.7px;
+  color: var(--text-on-tertiary);
+}
+
+.payment-divider {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 34px;
+}
+
+.payment-divider__rule {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+}
+
+.payment-divider__label {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  z-index: 1;
+  margin: 0;
+  padding: var(--size-8);
+  transform: translateX(-50%);
+  background: var(--surface-raised);
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-sm);
+  width: 100%;
+}
+
+.screen--payment .text-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-density-sm);
+  width: 100%;
+}
+
+.screen--payment .text-input-field__label-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  width: 100%;
+  overflow: clip;
+}
+
+.screen--payment .text-input-field__label {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-small);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-heading);
+  color: var(--text-primary);
+}
+
+.payment-badges {
+  display: flex;
+  flex: 1 1 0;
+  gap: var(--size-8);
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  height: 27px;
+}
+
+.screen--payment .text-input-field__input {
+  border-radius: 0;
+}
+.screen--payment .btn--pay-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--size-56);
+  padding: 10px;
+  border: 0;
+  border-radius: var(--radii-2);
+  background: #0072bd;
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-medium);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-on-tertiary);
+  cursor: pointer;
+}
+
+.payment-secured-logo {
+  align-self: flex-end;
+}

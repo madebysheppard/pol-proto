@@ -1,0 +1,89 @@
+@import "./tokens.css";
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../assets/fonts/NunitoSans.ttf") format("truetype-variations");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../assets/fonts/NunitoSans-Italic.ttf") format("truetype-variations");
+  font-weight: 200 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Post Office Digital HL";
+  src: url("../assets/fonts/PostOfficeDigitalHL.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Ensure the HTML `hidden` attribute always wins over any component display rule. */
+[hidden] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+:root {
+  --prototype-screen-max-width: 402px;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  line-height: var(--leading-body);
+  color: var(--text-primary);
+  background: var(--surface-canvas);
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Prevent Figma-exported assets from stretching in fixed-size boxes. */
+img[width][height] {
+  object-fit: contain;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+#app {
+  min-height: 100dvh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.screen {
+  width: min(100%, var(--prototype-screen-max-width));
+  margin: 0 auto;
+  overflow-x: hidden;
+}

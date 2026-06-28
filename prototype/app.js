@@ -1,0 +1,32 @@
+import { mountRouter } from "./utils/router.js";
+import "./screens/home.js";
+import "./screens/home-populated.js";
+import "./screens/qr-code.js";
+import "./screens/drop-off.js";
+import "./screens/send-addressfrom.js";
+import "./screens/send-addressto.js";
+import "./screens/size.js";
+import "./screens/heavy.js";
+import "./screens/choose-postage.js";
+import "./screens/compensation.js";
+import "./screens/delivery-address.js";
+import "./screens/address-drawer.js";
+import "./screens/confirm-delivery-details.js";
+import "./screens/recipient-details.js";
+import "./screens/return-details.js";
+import "./screens/return-address.js";
+import "./screens/confirm-return-details.js";
+import "./screens/basket.js";
+import "./screens/confirm-billing-information.js";
+import "./screens/contact-details.js";
+import "./screens/checkout.js";
+import "./screens/checkout-payment-processing.js";
+import "./screens/payment.js";
+import "./screens/order-confirmation.js";
+import "./screens/button-demo.js";
+import "./screens/choice-button-demo.js";
+import "./screens/form-fields-demo.js";
+
+const app = document.getElementById("app");
+
+mountRouter(app);

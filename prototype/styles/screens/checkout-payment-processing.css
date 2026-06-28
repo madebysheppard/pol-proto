@@ -1,0 +1,66 @@
+.screen--checkout-payment-processing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 402px;
+  min-height: 874px;
+  margin: 0 auto;
+  background: var(--surface-subtle);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 4%);
+}
+
+.checkout-payment-processing-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--spacing-stack-md);
+  align-items: center;
+  justify-content: center;
+  min-height: 874px;
+  padding:
+    var(--spacing-stack-xl)
+    var(--spacing-density-md)
+    var(--spacing-stack-md);
+  overflow: clip;
+  background: var(--surface-canvas);
+}
+
+.checkout-payment-processing__illustration {
+  flex-shrink: 0;
+  width: var(--size-80);
+  height: var(--size-80);
+}
+
+.checkout-payment-processing-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-stack-sm);
+  align-items: flex-start;
+  width: 100%;
+}
+
+.checkout-payment-processing__heading {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-family-brand), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-x-large);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+  color: var(--text-brand);
+  text-align: center;
+}
+
+.checkout-payment-processing__message {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-brand);
+  text-align: center;
+}
+
+.checkout-payment-processing__spinner {
+  flex-shrink: 0;
+}

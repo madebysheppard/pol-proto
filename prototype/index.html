@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usability Test Prototype</title>
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+    <link rel="stylesheet" href="./styles/transitions.css" />
+    <link rel="stylesheet" href="./styles/screens.css" />
+    <style>
+      .setup-check {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: var(--spacing-stack-lg, 24px);
+      }
+
+      .setup-check h1 {
+        font-family: var(--font-family-brand), var(--font-family-body), sans-serif;
+        font-size: var(--font-size-display, 28px);
+        line-height: var(--leading-heading, 140%);
+        color: var(--text-brand, #2e1a47);
+        margin: 0 0 var(--spacing-stack-sm, 8px);
+      }
+
+      .setup-check__swatches {
+        display: flex;
+        gap: var(--spacing-density-sm, 8px);
+        margin: var(--spacing-stack-md, 16px) 0;
+      }
+
+      .setup-check__swatch {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: var(--radius-sm, 4px);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .setup-check__meta {
+        font-size: var(--font-size-caption, 12px);
+        color: var(--text-secondary, #433159);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+.feature-header {
+  display: flex;
+  align-items: center;
+  gap: var(--size-16);
+  flex-shrink: 0;
+  height: 60px;
+  padding: 0 var(--spacing-density-md);
+  background: var(--surface-raised);
+}
+
+.feature-header__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--size-24);
+  height: var(--size-24);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.feature-header__back-icon {
+  display: block;
+  flex-shrink: 0;
+  width: var(--size-24);
+  height: var(--size-24);
+  background: url("../../assets/icons/arrow-back.svg") center / contain no-repeat;
+  /* action/primary/rest — matches Header ArrowLeft in spec */
+  filter: brightness(0) saturate(100%) invert(17%) sepia(95%) saturate(6978%) hue-rotate(336deg)
+    brightness(95%) contrast(101%);
+}
+
+.feature-header__title {
+  margin: 0;
+  flex: 1 1 0;
+  min-width: 0;
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-heading);
+  color: var(--text-brand);
+}
+
+.progress-indicator {
+  display: flex;
+  flex-shrink: 0;
+  height: 5px;
+  padding: 0 var(--spacing-density-md);
+  background: var(--surface-raised);
+  border-radius: 0 var(--radii-8) var(--radii-8) 0;
+}
+
+.progress-track {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  border-radius: var(--radius-sm);
+  background: var(--colour-purple-tint-90);
+}
+
+.progress-track__indicator {
+  width: 0;
+  height: 5px;
+  border-radius: var(--radius-sm);
+  background: var(--text-brand);
+  transition: width 0.35s ease;
+}

@@ -1,0 +1,1101 @@
+{
+  "colour": {
+    "purple": {
+      "base": {
+        "value": "#2e1a47",
+        "type": "color",
+        "description": "Brand base for purple (#2e1a47, the brand primary purple). The canonical purple colour at 0% tint, 0% shade. Aliased by tint.0 and shade.0."
+      },
+      "tint": {
+        "10": {
+          "value": "#433159",
+          "type": "color",
+          "description": "purple mixed with 10% white."
+        },
+        "20": {
+          "value": "#58486c",
+          "type": "color",
+          "description": "purple mixed with 20% white."
+        },
+        "30": {
+          "value": "#6d5f7e",
+          "type": "color",
+          "description": "purple mixed with 30% white."
+        },
+        "40": {
+          "value": "#827691",
+          "type": "color",
+          "description": "purple mixed with 40% white."
+        },
+        "50": {
+          "value": "#968ca3",
+          "type": "color",
+          "description": "purple mixed with 50% white."
+        },
+        "60": {
+          "value": "#aba3b5",
+          "type": "color",
+          "description": "purple mixed with 60% white."
+        },
+        "70": {
+          "value": "#c0bac8",
+          "type": "color",
+          "description": "purple mixed with 70% white."
+        },
+        "80": {
+          "value": "#d5d1da",
+          "type": "color",
+          "description": "purple mixed with 80% white."
+        },
+        "90": {
+          "value": "#eae8ed",
+          "type": "color",
+          "description": "purple mixed with 90% white."
+        },
+        "95": {
+          "value": "#f5f4f6",
+          "type": "color",
+          "description": "purple mixed with 95% white."
+        },
+        "97-5": {
+          "value": "#faf9fa",
+          "type": "color",
+          "description": "purple mixed with 97.5% white."
+        }
+      },
+      "shade": {
+        "10": {
+          "value": "#291740",
+          "type": "color",
+          "description": "purple mixed with 10% black."
+        },
+        "20": {
+          "value": "#251539",
+          "type": "color",
+          "description": "purple mixed with 20% black."
+        },
+        "30": {
+          "value": "#201232",
+          "type": "color",
+          "description": "purple mixed with 30% black."
+        },
+        "40": {
+          "value": "#1c102b",
+          "type": "color",
+          "description": "purple mixed with 40% black."
+        },
+        "50": {
+          "value": "#170d24",
+          "type": "color",
+          "description": "purple mixed with 50% black."
+        },
+        "60": {
+          "value": "#120a1c",
+          "type": "color",
+          "description": "purple mixed with 60% black."
+        },
+        "70": {
+          "value": "#0e0815",
+          "type": "color",
+          "description": "purple mixed with 70% black."
+        },
+        "80": {
+          "value": "#09050e",
+          "type": "color",
+          "description": "purple mixed with 80% black."
+        },
+        "90": {
+          "value": "#050307",
+          "type": "color",
+          "description": "purple mixed with 90% black."
+        },
+        "2-5": {
+          "value": "#2d1945",
+          "type": "color",
+          "description": "purple mixed with 2.5% black."
+        }
+      }
+    },
+    "pink": {
+      "base": {
+        "value": "#f7ced7",
+        "type": "color",
+        "description": "Brand base for pink (#f7ced7, soft pink). The canonical pink colour at 0% tint, 0% shade. Aliased by tint.0 and shade.0."
+      },
+      "tint": {
+        "10": {
+          "value": "#f8d3db",
+          "type": "color",
+          "description": "pink mixed with 10% white."
+        },
+        "20": {
+          "value": "#f9d8df",
+          "type": "color",
+          "description": "pink mixed with 20% white."
+        },
+        "30": {
+          "value": "#f9dde3",
+          "type": "color",
+          "description": "pink mixed with 30% white."
+        },
+        "40": {
+          "value": "#fae2e7",
+          "type": "color",
+          "description": "pink mixed with 40% white."
+        },
+        "50": {
+          "value": "#fbe7eb",
+          "type": "color",
+          "description": "pink mixed with 50% white."
+        },
+        "60": {
+          "value": "#fcebef",
+          "type": "color",
+          "description": "pink mixed with 60% white."
+        },
+        "70": {
+          "value": "#fdf0f3",
+          "type": "color",
+          "description": "pink mixed with 70% white."
+        },
+        "80": {
+          "value": "#fdf5f7",
+          "type": "color",
+          "description": "pink mixed with 80% white."
+        },
+        "90": {
+          "value": "#fefafb",
+          "type": "color",
+          "description": "pink mixed with 90% white."
+        }
+      },
+      "shade": {
+        "10": {
+          "value": "#deb9c1",
+          "type": "color",
+          "description": "pink mixed with 10% black."
+        },
+        "20": {
+          "value": "#c6a5ac",
+          "type": "color",
+          "description": "pink mixed with 20% black."
+        },
+        "30": {
+          "value": "#ad9096",
+          "type": "color",
+          "description": "pink mixed with 30% black."
+        },
+        "40": {
+          "value": "#947c81",
+          "type": "color",
+          "description": "pink mixed with 40% black."
+        },
+        "50": {
+          "value": "#7c676c",
+          "type": "color",
+          "description": "pink mixed with 50% black."
+        },
+        "60": {
+          "value": "#635256",
+          "type": "color",
+          "description": "pink mixed with 60% black."
+        },
+        "70": {
+          "value": "#4a3e41",
+          "type": "color",
+          "description": "pink mixed with 70% black."
+        },
+        "80": {
+          "value": "#31292b",
+          "type": "color",
+          "description": "pink mixed with 80% black."
+        },
+        "90": {
+          "value": "#191515",
+          "type": "color",
+          "description": "pink mixed with 90% black."
+        }
+      }
+    },
+    "red": {
+      "base": {
+        "value": "#e40046",
+        "type": "color",
+        "description": "Brand base for red (#e40046, the brand primary red). The canonical red colour at 0% tint, 0% shade. Aliased by tint.0 and shade.0."
+      },
+      "tint": {
+        "10": {
+          "value": "#E71A59",
+          "type": "color",
+          "description": "red mixed with 20% white."
+        },
+        "20": {
+          "value": "#e9336b",
+          "type": "color",
+          "description": "red mixed with 20% white."
+        },
+        "30": {
+          "value": "#ec4c7e",
+          "type": "color",
+          "description": "red mixed with 30% white."
+        },
+        "40": {
+          "value": "#ef6690",
+          "type": "color",
+          "description": "red mixed with 40% white."
+        },
+        "50": {
+          "value": "#F180A2",
+          "type": "color",
+          "description": "red mixed with 50% white."
+        },
+        "60": {
+          "value": "#f499b5",
+          "type": "color",
+          "description": "red mixed with 60% white."
+        },
+        "70": {
+          "value": "#F7B2C7",
+          "type": "color",
+          "description": "red mixed with 70% white."
+        },
+        "80": {
+          "value": "#faccda",
+          "type": "color",
+          "description": "red mixed with 80% white."
+        },
+        "90": {
+          "value": "#FCE5EC",
+          "type": "color",
+          "description": "red mixed with 90% white."
+        },
+        "95": {
+          "value": "#fef2f6",
+          "type": "color",
+          "description": "red mixed with 95% white."
+        },
+        "97-5": {
+          "value": "#FEF9FA",
+          "type": "color",
+          "description": "red mixed with 97.5% white."
+        }
+      },
+      "shade": {
+        "10": {
+          "value": "#cd003f",
+          "type": "color",
+          "description": "red mixed with 10% black."
+        },
+        "20": {
+          "value": "#b60038",
+          "type": "color",
+          "description": "red mixed with 20% black."
+        },
+        "30": {
+          "value": "#a00031",
+          "type": "color",
+          "description": "red mixed with 30% black."
+        },
+        "40": {
+          "value": "#89002a",
+          "type": "color",
+          "description": "red mixed with 40% black."
+        },
+        "50": {
+          "value": "#720023",
+          "type": "color",
+          "description": "red mixed with 50% black."
+        },
+        "60": {
+          "value": "#5b001c",
+          "type": "color",
+          "description": "red mixed with 60% black."
+        },
+        "70": {
+          "value": "#440015",
+          "type": "color",
+          "description": "red mixed with 70% black."
+        },
+        "80": {
+          "value": "#2e000e",
+          "type": "color",
+          "description": "red mixed with 80% black."
+        },
+        "90": {
+          "value": "#170007",
+          "type": "color",
+          "description": "red mixed with 90% black."
+        },
+        "2-5": {
+          "value": "#de0044",
+          "type": "color",
+          "description": "red mixed with 2.5% black."
+        }
+      }
+    },
+    "pale-blue": {
+      "base": {
+        "value": "#ccedf3",
+        "type": "color",
+        "description": "Brand base for pale-blue (#ccedf3, palest blue). The canonical pale-blue colour at 0% tint, 0% shade. Aliased by tint.0 and shade.0."
+      },
+      "tint": {
+        "10": {
+          "value": "#d1eff4",
+          "type": "color",
+          "description": "pale-blue mixed with 10% white."
+        },
+        "20": {
+          "value": "#d6f1f5",
+          "type": "color",
+          "description": "pale-blue mixed with 20% white."
+        },
+        "30": {
+          "value": "#dbf2f7",
+          "type": "color",
+          "description": "pale-blue mixed with 30% white."
+        },
+        "40": {
+          "value": "#e0f4f8",
+          "type": "color",
+          "description": "pale-blue mixed with 40% white."
+        },
+        "50": {
+          "value": "#E5F6F9",
+          "type": "color",
+          "description": "pale-blue mixed with 50% white."
+        },
+        "60": {
+          "value": "#ebf8fa",
+          "type": "color",
+          "description": "pale-blue mixed with 60% white."
+        },
+        "70": {
+          "value": "#f0fafb",
+          "type": "color",
+          "description": "pale-blue mixed with 70% white."
+        },
+        "80": {
+          "value": "#f5fbfd",
+          "type": "color",
+          "description": "pale-blue mixed with 80% white."
+        },
+        "90": {
+          "value": "#fafdfe",
+          "type": "color",
+          "description": "pale-blue mixed with 90% white."
+        },
+        "95": {
+          "value": "#fcfefe",
+          "type": "color",
+          "description": "pale-blue mixed with 95% white."
+        },
+        "97-5": {
+          "value": "#feffff",
+          "type": "color",
+          "description": "pale-blue mixed with 97.5% white."
+        }
+      },
+      "shade": {
+        "10": {
+          "value": "#b8d5db",
+          "type": "color",
+          "description": "pale-blue mixed with 10% black."
+        },
+        "20": {
+          "value": "#A3BEC2",
+          "type": "color",
+          "description": "pale-blue mixed with 20% black."
+        },
+        "30": {
+          "value": "#8fa6aa",
+          "type": "color",
+          "description": "pale-blue mixed with 30% black."
+        },
+        "40": {
+          "value": "#7a8e92",
+          "type": "color",
+          "description": "pale-blue mixed with 40% black."
+        },
+        "50": {
+          "value": "#66777A",
+          "type": "color",
+          "description": "pale-blue mixed with 50% black."
+        },
+        "60": {
+          "value": "#525f61",
+          "type": "color",
+          "description": "pale-blue mixed with 60% black."
+        },
+        "70": {
+          "value": "#3d4749",
+          "type": "color",
+          "description": "pale-blue mixed with 70% black."
+        },
+        "80": {
+          "value": "#292f31",
+          "type": "color",
+          "description": "pale-blue mixed with 80% black."
+        },
+        "90": {
+          "value": "#141818",
+          "type": "color",
+          "description": "pale-blue mixed with 90% black."
+        },
+        "2-5": {
+          "value": "#c7e7ed",
+          "type": "color",
+          "description": "pale-blue mixed with 2.5% black."
+        }
+      }
+    },
+    "blue": {
+      "base": {
+        "value": "#9adbe8",
+        "type": "color",
+        "description": "Brand base for blue (#9adbe8, soft blue). The canonical blue colour at 0% tint, 0% shade. Aliased by tint.0 and shade.0."
+      },
+      "tint": {
+        "10": {
+          "value": "#a4dfea",
+          "type": "color",
+          "description": "blue mixed with 10% white."
+        },
+        "20": {
+          "value": "#aee2ed",
+          "type": "color",
+          "description": "blue mixed with 20% white."
+        },
+        "30": {
+          "value": "#b8e6ef",
+          "type": "color",
+          "description": "blue mixed with 30% white."
+        },
+        "40": {
+          "value": "#c2e9f1",
+          "type": "color",
+          "description": "blue mixed with 40% white."
+        },
+        "50": {
+          "value": "#CDEDF3",
+          "type": "color",
+          "description": "blue mixed with 50% white."
+        },
+        "60": {
+          "value": "#d7f1f6",
+          "type": "color",
+          "description": "blue mixed with 60% white."
+        },
+        "70": {
+          "value": "#e1f4f8",
+          "type": "color",
+          "description": "blue mixed with 70% white."
+        },
+        "80": {
+          "value": "#ebf8fa",
+          "type": "color",
+          "description": "blue mixed with 80% white."
+        },
+        "90": {
+          "value": "#f5fbfd",
+          "type": "color",
+          "description": "blue mixed with 90% white."
+        },
+        "95": {
+          "value": "#fafdfe",
+          "type": "color",
+          "description": "blue mixed with 95% white."
+        },
+        "97-5": {
+          "value": "#fcfefe",
+          "type": "color",
+          "description": "blue mixed with 97.5% white."
+        }
+      },
+      "shade": {
+        "10": {
+          "value": "#8bc5d1",
+          "type": "color",
+          "description": "blue mixed with 10% black."
+        },
+        "20": {
+          "value": "#7bafba",
+          "type": "color",
+          "description": "blue mixed with 20% black."
+        },
+        "30": {
+          "value": "#6c99a2",
+          "type": "color",
+          "description": "blue mixed with 30% black."
+        },
+        "40": {
+          "value": "#5c838b",
+          "type": "color",
+          "description": "blue mixed with 40% black."
+        },
+        "50": {
+          "value": "#4d6e74",
+          "type": "color",
+          "description": "blue mixed with 50% black."
+        },
+        "60": {
+          "value": "#3e585d",
+          "type": "color",
+          "description": "blue mixed with 60% black."
+        },
+        "70": {
+          "value": "#2e4246",
+          "type": "color",
+          "description": "blue mixed with 70% black."
+        },
+        "80": {
+          "value": "#1f2c2e",
+          "type": "color",
+          "description": "blue mixed with 80% black."
+        },
+        "90": {
+          "value": "#0f1617",
+          "type": "color",
+          "description": "blue mixed with 90% black."
+        }
+      }
+    },
+    "coral": {
+      "base": {
+        "value": "#ff808b",
+        "type": "color",
+        "description": "Brand base for coral (#ff808b, warm coral). The canonical coral colour at 0% tint, 0% shade. Aliased by tint.0 and shade.0."
+      },
+      "tint": {
+        "10": {
+          "value": "#ff8d97",
+          "type": "color",
+          "description": "coral mixed with 10% white."
+        },
+        "20": {
+          "value": "#ff99a2",
+          "type": "color",
+          "description": "coral mixed with 20% white."
+        },
+        "30": {
+          "value": "#ffa6ae",
+          "type": "color",
+          "description": "coral mixed with 30% white."
+        },
+        "40": {
+          "value": "#ffb3b9",
+          "type": "color",
+          "description": "coral mixed with 40% white."
+        },
+        "50": {
+          "value": "#FFBFC5",
+          "type": "color",
+          "description": "coral mixed with 50% white."
+        },
+        "60": {
+          "value": "#ffccd1",
+          "type": "color",
+          "description": "coral mixed with 60% white."
+        },
+        "70": {
+          "value": "#ffd9dc",
+          "type": "color",
+          "description": "coral mixed with 70% white."
+        },
+        "80": {
+          "value": "#ffe6e8",
+          "type": "color",
+          "description": "coral mixed with 80% white."
+        },
+        "90": {
+          "value": "#fff2f3",
+          "type": "color",
+          "description": "coral mixed with 90% white."
+        },
+        "95": {
+          "value": "#fff9f9",
+          "type": "color",
+          "description": "coral mixed with 95% white."
+        },
+        "97-5": {
+          "value": "#fffcfc",
+          "type": "color",
+          "description": "coral mixed with 97.5% white."
+        }
+      },
+      "shade": {
+        "5": {
+          "value": "#f27a84",
+          "type": "color",
+          "description": "coral mixed with 5% black."
+        },
+        "10": {
+          "value": "#E5737D",
+          "type": "color",
+          "description": "coral mixed with 10% black."
+        },
+        "20": {
+          "value": "#CC666F",
+          "type": "color",
+          "description": "coral mixed with 20% black."
+        },
+        "30": {
+          "value": "#b25a61",
+          "type": "color",
+          "description": "coral mixed with 30% black."
+        },
+        "40": {
+          "value": "#994d53",
+          "type": "color",
+          "description": "coral mixed with 40% black."
+        },
+        "50": {
+          "value": "#804046",
+          "type": "color",
+          "description": "coral mixed with 50% black."
+        },
+        "60": {
+          "value": "#663338",
+          "type": "color",
+          "description": "coral mixed with 60% black."
+        },
+        "70": {
+          "value": "#4D262A",
+          "type": "color",
+          "description": "coral mixed with 70% black."
+        },
+        "80": {
+          "value": "#331a1c",
+          "type": "color",
+          "description": "coral mixed with 80% black."
+        },
+        "90": {
+          "value": "#1A0D0E",
+          "type": "color",
+          "description": "coral mixed with 90% black."
+        },
+        "2-5": {
+          "value": "#f97d88",
+          "type": "color",
+          "description": "coral mixed with 2.5% black."
+        }
+      }
+    },
+    "neutral": {
+      "white": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "Pure white."
+      },
+      "black": {
+        "value": "#000000",
+        "type": "color",
+        "description": "Pure black."
+      },
+      "off-white": {
+        "value": "#fdfdfd",
+        "type": "color",
+        "description": "Brand off-white. Used as a near-white fill where pure white would feel too clinical."
+      }
+    },
+    "greyBlue": {
+      "tint": {
+        "20": {
+          "value": "#51555E",
+          "type": "color"
+        },
+        "80": {
+          "value": "#d0d3d4",
+          "type": "color",
+          "description": "Brand neutral — stone. Mid-light grey for surfaces and dividers."
+        },
+        "97-5": {
+          "value": "#fbfafb",
+          "type": "color",
+          "description": "Off-white with a faint purple cast. Used for canvas backgrounds."
+        }
+      },
+      "base": {
+        "value": "#252a36",
+        "type": "color",
+        "description": "Brand neutral — midnight. Deep blue-black for inverse surfaces and brand contrast."
+      }
+    },
+    "grey": {
+      "tint": {
+        "15": {
+          "value": "#444444",
+          "type": "color",
+          "description": "Dark grey — secondary text, supporting copy."
+        },
+        "25": {
+          "value": "#595959",
+          "type": "color",
+          "description": "Dark grey — secondary text, supporting copy."
+        },
+        "65": {
+          "value": "#b6b6b6",
+          "type": "color",
+          "description": "Mid-grey — tertiary text, disabled labels, placeholder text."
+        },
+        "95": {
+          "value": "#f6f6f6",
+          "type": "color",
+          "description": "Hairline grey for dividers, separators, subtle borders."
+        }
+      },
+      "base": {
+        "value": "#222222",
+        "type": "color",
+        "description": "Near-black — primary text, the strongest neutral in the brand palette."
+      }
+    },
+    "system": {
+      "success": {
+        "base": {
+          "value": "#008000",
+          "type": "color",
+          "description": "Success green — default. Status indicator and finish-action base."
+        },
+        "tint": {
+          "20": {
+            "value": "#339933",
+            "type": "color",
+            "description": "Success green — light variant for hover states."
+          },
+          "90": {
+            "value": "#E5F2E5",
+            "type": "color"
+          }
+        },
+        "shade": {
+          "20": {
+            "value": "#006600",
+            "type": "color",
+            "description": "Success green — dark variant for pressed states."
+          }
+        }
+      },
+      "warning": {
+        "base": {
+          "value": "#dc381f",
+          "type": "color",
+          "description": "Warning red — default. Used for error/danger messaging."
+        },
+        "tint": {
+          "95": {
+            "value": "#FDF5F4",
+            "type": "color",
+            "description": "Warning red — pale background tint."
+          }
+        }
+      },
+      "focus": {
+        "base": {
+          "value": "#ffd801",
+          "type": "color",
+          "description": "Focus yellow — default. Keyboard focus indicator colour."
+        },
+        "tint": {
+          "10": {
+            "value": "#fffbe6",
+            "type": "color"
+          }
+        }
+      },
+      "link": {
+        "base": {
+          "value": "#2b60de",
+          "type": "color",
+          "description": "Link blue — default."
+        },
+        "tint": {
+          "90": {
+            "value": "#eaeffc",
+            "type": "color",
+            "description": "Link blue — pale tint for hover backgrounds."
+          }
+        }
+      },
+      "visited": {
+        "base": {
+          "value": "#800080",
+          "type": "color",
+          "description": "Visited purple — default."
+        },
+        "tint": {
+          "95": {
+            "value": "#F9F2F9",
+            "type": "color",
+            "description": "Visited purple — pale tint."
+          }
+        }
+      }
+    }
+  },
+  "size": {
+    "2": {
+      "value": "2",
+      "type": "spacing"
+    },
+    "4": {
+      "value": "4",
+      "type": "spacing"
+    },
+    "8": {
+      "value": "8",
+      "type": "spacing"
+    },
+    "12": {
+      "value": "12",
+      "type": "spacing"
+    },
+    "14": {
+      "value": "14",
+      "type": "spacing"
+    },
+    "16": {
+      "value": "16",
+      "type": "spacing"
+    },
+    "24": {
+      "value": "24",
+      "type": "spacing"
+    },
+    "32": {
+      "value": "32",
+      "type": "spacing"
+    },
+    "40": {
+      "value": "40",
+      "type": "spacing"
+    },
+    "48": {
+      "value": "48",
+      "type": "spacing"
+    },
+    "56": {
+      "value": "56",
+      "type": "spacing"
+    },
+    "64": {
+      "value": "64",
+      "type": "spacing"
+    },
+    "80": {
+      "value": "80",
+      "type": "spacing"
+    },
+    "128": {
+      "value": "128",
+      "type": "spacing"
+    }
+  },
+  "font": {
+    "family": {
+      "body-primitive": {
+        "value": "Nunito Sans",
+        "type": "fontFamilies",
+        "description": "Default body and UI typeface (primitive). Aliased by semantic.font.family.body."
+      },
+      "brand-primitive": {
+        "value": "Post Office Digital HL",
+        "type": "fontFamilies",
+        "description": "Branded display typeface (primitive). Use exclusively for brand expression."
+      },
+      "fallback-primitive": {
+        "value": "Arial",
+        "type": "fontFamilies",
+        "description": "System fallback typeface (primitive)."
+      }
+    },
+    "weight": {
+      "regular": {
+        "value": "400",
+        "type": "fontWeights",
+        "description": "Regular weight for body copy and standard UI text."
+      },
+      "semibold": {
+        "value": "600",
+        "type": "fontWeights",
+        "description": "Semibold weight. Reserved for future emphasis tokens."
+      },
+      "bold": {
+        "value": "700",
+        "type": "fontWeights",
+        "description": "Bold weight used by all heading and display compositions."
+      }
+    },
+    "size": {
+      "11": {
+        "value": "11",
+        "type": "fontSizes"
+      },
+      "12": {
+        "value": "12",
+        "type": "fontSizes"
+      },
+      "14": {
+        "value": "14",
+        "type": "fontSizes"
+      },
+      "16": {
+        "value": "16",
+        "type": "fontSizes"
+      },
+      "18": {
+        "value": "18",
+        "type": "fontSizes"
+      },
+      "20": {
+        "value": "20",
+        "type": "fontSizes"
+      },
+      "24": {
+        "value": "24",
+        "type": "fontSizes"
+      },
+      "28": {
+        "value": "28",
+        "type": "fontSizes"
+      },
+      "30": {
+        "value": "30",
+        "type": "fontSizes"
+      },
+      "40": {
+        "value": "40",
+        "type": "fontSizes"
+      },
+      "54": {
+        "value": "54",
+        "type": "fontSizes"
+      }
+    }
+  },
+  "leading": {
+    "100": {
+      "value": "100%",
+      "type": "lineHeights"
+    },
+    "120": {
+      "value": "120%",
+      "type": "lineHeights"
+    },
+    "140": {
+      "value": "140%",
+      "type": "lineHeights",
+      "description": "Heading leading. Aliased by leading.heading."
+    },
+    "150": {
+      "value": "150%",
+      "type": "lineHeights",
+      "description": "Body leading. Aliased by leading.body."
+    },
+    "160": {
+      "value": "160%",
+      "type": "lineHeights",
+      "description": "Caption leading. Aliased by leading.caption."
+    }
+  },
+  "text-decoration": {
+    "underline": {
+      "value": "underline",
+      "type": "textDecoration"
+    },
+    "none": {
+      "value": "none",
+      "type": "textDecoration"
+    }
+  },
+  "radii": {
+    "2": {
+      "value": "2",
+      "type": "borderRadius"
+    },
+    "4": {
+      "value": "4",
+      "type": "borderRadius"
+    },
+    "8": {
+      "value": "8",
+      "type": "borderRadius"
+    },
+    "12": {
+      "value": "12",
+      "type": "borderRadius"
+    },
+    "16": {
+      "value": "16",
+      "type": "borderRadius"
+    }
+  },
+  "border": {
+    "1": {
+      "value": "1",
+      "type": "borderWidth"
+    },
+    "2": {
+      "value": "2",
+      "type": "borderWidth"
+    },
+    "4": {
+      "value": "4",
+      "type": "borderWidth"
+    }
+  },
+  "shadow": {
+    "shallow": {
+      "1": {
+        "value": {
+          "x": "0",
+          "y": "1",
+          "blur": "2",
+          "spread": "0",
+          "color": "#2e1a4714",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "Compact shallow shadow. Brand purple at 8% opacity."
+      },
+      "2": {
+        "value": {
+          "x": "0",
+          "y": "2",
+          "blur": "8",
+          "spread": "0",
+          "color": "#2e1a471a",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "Broad shallow shadow. Brand purple at 10% opacity."
+      }
+    },
+    "deep": {
+      "1": {
+        "value": {
+          "x": "0",
+          "y": "4",
+          "blur": "8",
+          "spread": "0",
+          "color": "#2e1a4729",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "Compact deep shadow. Brand purple at 16% opacity."
+      },
+      "2": {
+        "value": {
+          "x": "0",
+          "y": "8",
+          "blur": "24",
+          "spread": "0",
+          "color": "#2e1a4733",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "Broad deep shadow. Brand purple at 20% opacity."
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/**
+ * Shared component styles for the prototype.
+ * Add reusable UI patterns here as screens are built.
+ */
+
+@import "./components/button.css";
+@import "./components/choice-button.css";
+@import "./components/text-input-field.css";
+@import "./components/radio.css";
+@import "./components/checkbox.css";
+@import "./components/info-alert.css";
+@import "./components/feature-header.css";
+
+.proto-asset-icon {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.proto-asset-logo {
+  flex-shrink: 0;
+  object-fit: contain;
+  object-position: left center;
+}

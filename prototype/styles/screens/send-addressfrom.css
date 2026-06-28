@@ -1,0 +1,137 @@
+.screen--send-addressfrom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 402px;
+  min-height: 874px;
+  margin: 0 auto;
+  background: var(--surface-raised);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 4%);
+}
+
+
+.send-addressfrom-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  padding: var(--spacing-density-xl) var(--spacing-density-md);
+  overflow: clip;
+}
+
+.send-addressfrom-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--spacing-stack-md);
+  min-height: 0;
+}
+
+.send-addressfrom-intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-density-lg);
+  width: 100%;
+}
+
+.send-addressfrom-heading {
+  margin: 0;
+  font-family: var(--font-family-brand), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-heading-x-large);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-heading);
+  color: var(--text-brand);
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--action-secondary-pressed);
+  border-radius: var(--radius-md);
+  background: var(--surface-canvas);
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-stack-sm);
+  min-height: 76px;
+  padding: var(--size-16);
+  cursor: pointer;
+}
+
+.radio-option__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.radio-control {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--icon-primary);
+  border-radius: 50%;
+  background: var(--surface-raised);
+}
+
+.radio-control__dot {
+  display: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--text-brand);
+}
+
+.radio-option__input:checked + .radio-control .radio-control__dot {
+  display: block;
+}
+
+.radio-option__label {
+  font-family: var(--font-family-body), var(--font-family-fallback), sans-serif;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--text-secondary);
+}
+
+.radio-divider {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: var(--action-secondary-pressed);
+}
+
+.send-addressfrom-footer {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: stretch;
+  padding: var(--spacing-stack-md) var(--spacing-density-md);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
