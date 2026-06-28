@@ -29,5 +29,41 @@ import "./screens/choice-button-demo.js";
 import "./screens/form-fields-demo.js";
 
 const app = document.getElementById("app");
+const THEME_COLOR_META_SELECTOR = 'meta[name="theme-color"]';
+
+function markContinueFooters(root) {
+  if (!root) {
+    return;
+  }
+
+  const footers = root.querySelectorAll('.screen > [class$="-footer"]');
+  footers.forEach((footer) => {
+    const hasContinueButton = Boolean(footer.querySelector(".btn--continue"));
+    footer.classList.toggle("screen-footer--continue", hasContinueButton);
+  });
+}
+
+function updateViewportSurface(root) {
+  const screen = root?.querySelector(".screen");
+  const usesCanvasSurface = screen?.classList.contains("screen--home");
+  const surface = usesCanvasSurface ? "canvas" : "raised";
+  const themeColor = usesCanvasSurface ? "#f5f3f8" : "#ffffff";
+
+  document.body.dataset.screenSurface = surface;
+
+  const themeColorMeta = document.querySelector(THEME_COLOR_META_SELECTOR);
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute("content", themeColor);
+  }
+}
 
 mountRouter(app);
+markContinueFooters(app);
+updateViewportSurface(app);
+
+const footerClassObserver = new MutationObserver(() => {
+  markContinueFooters(app);
+  updateViewportSurface(app);
+});
+
+footerClassObserver.observe(app, { childList: true, subtree: true });

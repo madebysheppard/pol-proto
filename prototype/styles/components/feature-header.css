@@ -53,6 +53,9 @@
   padding: 0 var(--spacing-density-md);
   background: var(--surface-raised);
   border-radius: 0 var(--radii-8) var(--radii-8) 0;
+  position: sticky;
+  top: 60px;
+  z-index: 19;
 }
 
 .progress-track {
