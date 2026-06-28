@@ -22,7 +22,7 @@ function normalizeTransition(transition) {
   return DEFAULT_TRANSITION;
 }
 
-export function createRouter({ defaultScreenId = "home" } = {}) {
+export function createRouter({ defaultScreenId = "index" } = {}) {
   const screens = new Map();
   let currentParams = {};
   let pendingTransition = null;
@@ -32,7 +32,7 @@ export function createRouter({ defaultScreenId = "home" } = {}) {
 
   const getCurrentScreenId = () => {
     const id = window.location.hash.replace(/^#/, "") || defaultScreenId;
-    return id === "index" ? defaultScreenId : id;
+    return id;
   };
 
   const getCurrentParams = () => currentParams;

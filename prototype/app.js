@@ -1,4 +1,5 @@
 import { mountRouter } from "./utils/router.js";
+import "./screens/index.js";
 import "./screens/home.js";
 import "./screens/home-populated.js";
 import "./screens/qr-code.js";
