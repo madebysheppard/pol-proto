@@ -2,14 +2,26 @@
   "name": "POL Prototype",
   "short_name": "POL Proto",
   "description": "Usability test prototype screen navigator.",
-  "start_url": "/prototype/index.html#index",
-  "scope": "/prototype/",
+  "start_url": "./prototype/index.html#index",
+  "scope": "./prototype/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "/icons/local-post-office.svg",
+      "src": "./icons/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/local-post-office.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
