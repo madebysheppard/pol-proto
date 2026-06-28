@@ -6,6 +6,9 @@
   height: 60px;
   padding: 0 var(--spacing-density-md);
   background: var(--surface-raised);
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 .feature-header__back {

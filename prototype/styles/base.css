@@ -87,3 +87,12 @@ a {
   margin: 0 auto;
   overflow-x: hidden;
 }
+
+/* Keep CTA footers docked on screens that render a Continue button. */
+.screen > [class$="-footer"]:has(.btn--continue) {
+  position: sticky;
+  bottom: 0;
+  z-index: 15;
+  margin-top: auto;
+  background: var(--surface-raised);
+}
