@@ -24,12 +24,6 @@ registerScreen("home", () => {
   const section = document.createElement("section");
   section.className = "screen screen--home";
   section.innerHTML = `
-    <div class="status-bar" aria-hidden="true">
-      <span class="status-bar__time">9:30</span>
-      <span class="status-bar__camera"></span>
-      <span class="status-bar__icons"></span>
-    </div>
-
     <header class="header header--home">
       ${roundButton(
         `<img src="${screenAsset("home", "settings.png")}" alt="" width="20" height="20" />`,

@@ -67,12 +67,6 @@ registerScreen("home-populated", () => {
   const section = document.createElement("section");
   section.className = "screen screen--home screen--home-populated";
   section.innerHTML = `
-    <div class="status-bar" aria-hidden="true">
-      <span class="status-bar__time">9:30</span>
-      <span class="status-bar__camera"></span>
-      <span class="status-bar__icons"></span>
-    </div>
-
     <header class="header header--home">
       ${roundButton(figmaIcon("Settings", { size: 20 }), { iconOnly: true }).outerHTML}
       ${roundButton(figmaIcon("Cart", { size: 20 }), { iconOnly: true }).outerHTML}
