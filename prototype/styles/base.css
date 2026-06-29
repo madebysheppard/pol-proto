@@ -119,6 +119,11 @@ body[data-screen-surface="raised"] {
   z-index: 20;
 }
 
+/* Dock any screen footer to the bottom. */
+.screen > [class$="-footer"] {
+  margin-top: auto;
+}
+
 /* Keep CTA footers docked on screens that render a Continue button. */
 .screen > [class$="-footer"].screen-footer--continue {
   position: sticky;

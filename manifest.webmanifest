@@ -3,7 +3,7 @@
   "short_name": "POL Proto",
   "description": "Usability test prototype screen navigator.",
   "start_url": "./prototype/index.html#index",
-  "scope": "./prototype/",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#fbfafb",
   "theme_color": "#fbfafb",

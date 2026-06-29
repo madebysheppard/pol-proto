@@ -1,11 +1,17 @@
 import { registerScreen, navigate } from "../utils/router.js";
 import { figmaIcon, screenAsset } from "../utils/assets.js";
 
-function roundButton(content, { iconOnly = false } = {}) {
+function roundButton(content, { iconOnly = false, ariaLabel, action } = {}) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = `round-button${iconOnly ? " round-button--icon" : ""}`;
   button.innerHTML = content;
+  if (ariaLabel) {
+    button.setAttribute("aria-label", ariaLabel);
+  }
+  if (action) {
+    button.dataset.action = action;
+  }
   return button;
 }
 
@@ -68,7 +74,11 @@ registerScreen("home-populated", () => {
   section.className = "screen screen--home screen--home-populated";
   section.innerHTML = `
     <header class="header header--home">
-      ${roundButton(figmaIcon("Settings", { size: 20 }), { iconOnly: true }).outerHTML}
+      ${roundButton(figmaIcon("Settings", { size: 20 }), {
+        iconOnly: true,
+        ariaLabel: "Page select",
+        action: "open-index",
+      }).outerHTML}
       ${roundButton(figmaIcon("Cart", { size: 20 }), { iconOnly: true }).outerHTML}
     </header>
 
@@ -106,6 +116,10 @@ registerScreen("home-populated", () => {
 
   section.querySelector(".parcel-card-row").addEventListener("click", () => {
     navigate("qr-code");
+  });
+
+  section.querySelector('[data-action="open-index"]')?.addEventListener("click", () => {
+    navigate("index");
   });
 
   return section;
