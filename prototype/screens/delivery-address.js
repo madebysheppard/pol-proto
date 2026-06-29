@@ -81,17 +81,13 @@ registerScreen("delivery-address", ({ address = "" } = {}) => {
     }, { transition: "sheet-up" });
   });
 
-  // Figma's wired back-target for this frame is "Size / Medium parcel selected",
-  // not the immediately preceding screen in the confirmed forward chain
-  // (compensation -> delivery-address). Implemented as literally wired,
-  // per source-of-truth precedence -- see Design Conflicts in chat.
   section.querySelector(".feature-header__back").addEventListener("click", () => {
-    navigate("size", {}, { transition: "slide-back" });
+    navigate("recipient-details", {}, { transition: "slide-back" });
   });
 
   continueButton.addEventListener("click", () => {
     if (!continueButton.disabled) {
-      navigate("recipient-details");
+      navigate("confirm-delivery-details");
     }
   });
 

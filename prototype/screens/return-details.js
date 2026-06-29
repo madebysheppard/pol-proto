@@ -79,12 +79,12 @@ registerScreen("return-details", () => {
   lastNameInput.addEventListener("input", updateContinueState);
 
   section.querySelector(".feature-header__back").addEventListener("click", () => {
-    navigate("return-address", {}, { transition: "slide-back" });
+    navigate("confirm-delivery-details", {}, { transition: "slide-back" });
   });
 
   continueButton.addEventListener("click", () => {
     if (!continueButton.disabled) {
-      navigate("confirm-return-details");
+      navigate("return-address");
     }
   });
 

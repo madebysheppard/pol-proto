@@ -248,3 +248,13 @@
   transform: rotate(180deg);
 }
 
+.address-result-row__arrow--down {
+  mask: url("../../assets/icons/chevron-down.svg") center / contain no-repeat;
+  -webkit-mask: url("../../assets/icons/chevron-down.svg") center / contain no-repeat;
+}
+
+.address-result-row--show-more {
+  background: var(--surface-raised);
+  cursor: default;
+}
+

@@ -92,7 +92,7 @@ registerScreen("compensation", () => {
 
   continueButton.addEventListener("click", () => {
     if (!continueButton.disabled) {
-      navigate("delivery-address");
+      navigate("recipient-details");
     }
   });
 

@@ -1,9 +1,6 @@
 import { createButtonFromSpec } from "../components/button.js";
 import { registerScreen, navigate } from "../utils/router.js";
-import { iconImg } from "../utils/assets.js";
-
-const ROYAL_MAIL_LOGO_URL =
-  "/Users/jacshe/.cursor/projects/Users-jacshe-dev-UT-260626/assets/provider-logo-08772a2d-0441-4586-8cf4-d2c6d78470d2.png";
+import { iconImg, logoImg } from "../utils/assets.js";
 
 const options = [
   {
@@ -70,13 +67,10 @@ function postageOption(option) {
         aria-pressed="false"
       >
         <div class="postage-option__header">
-          <img
-            class="postage-option__logo"
-            src="${ROYAL_MAIL_LOGO_URL}"
-            alt=""
-            width="51"
-            height="34"
-          />
+          ${logoImg(
+            { screen: "choose-postage", file: "provider-logo.png" },
+            { width: 51, height: 34, className: "postage-option__logo", alt: "" }
+          )}
         </div>
 
         <div class="postage-option__info">

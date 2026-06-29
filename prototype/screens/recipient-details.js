@@ -126,12 +126,12 @@ registerScreen("recipient-details", () => {
   lastNameInput.addEventListener("input", updateContinueState);
 
   section.querySelector(".feature-header__back").addEventListener("click", () => {
-    navigate("delivery-address", {}, { transition: "slide-back" });
+    navigate("compensation", {}, { transition: "slide-back" });
   });
 
   continueButton.addEventListener("click", () => {
     if (!continueButton.disabled) {
-      navigate("confirm-delivery-details");
+      navigate("delivery-address");
     }
   });
 

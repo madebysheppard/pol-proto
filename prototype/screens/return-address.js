@@ -87,12 +87,12 @@ registerScreen("return-address", ({ address = "" } = {}) => {
   });
 
   section.querySelector(".feature-header__back").addEventListener("click", () => {
-    navigate("confirm-delivery-details", {}, { transition: "slide-back" });
+    navigate("return-details", {}, { transition: "slide-back" });
   });
 
   continueButton.addEventListener("click", () => {
     if (!continueButton.disabled) {
-      navigate("return-details");
+      navigate("confirm-return-details");
     }
   });
 

@@ -30,6 +30,10 @@ import "./screens/form-fields-demo.js";
 
 const app = document.getElementById("app");
 const THEME_COLOR_META_SELECTOR = 'meta[name="theme-color"]';
+const IS_LOCALHOST =
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1" ||
+  window.location.hostname === "[::1]";
 
 function markContinueFooters(root) {
   if (!root) {
@@ -57,6 +61,21 @@ function updateViewportSurface(root) {
   }
 }
 
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) {
+    return;
+  }
+
+  if (window.location.protocol !== "https:" && !IS_LOCALHOST) {
+    return;
+  }
+
+  navigator.serviceWorker.register("/sw.js").catch(() => {
+    // Keep prototype UX unaffected if SW registration fails.
+  });
+}
+
+registerServiceWorker();
 mountRouter(app);
 markContinueFooters(app);
 updateViewportSurface(app);

@@ -61,7 +61,7 @@ registerScreen("confirm-delivery-details", () => {
   footer.appendChild(continueButton);
 
   section.querySelector(".feature-header__back").addEventListener("click", () => {
-    navigate("recipient-details", {}, { transition: "slide-back" });
+    navigate("delivery-address", {}, { transition: "slide-back" });
   });
 
   section.querySelector(".link-button--edit-recipient").addEventListener("click", () => {
@@ -73,7 +73,7 @@ registerScreen("confirm-delivery-details", () => {
   });
 
   continueButton.addEventListener("click", () => {
-    navigate("return-address");
+    navigate("return-details");
   });
 
   return section;

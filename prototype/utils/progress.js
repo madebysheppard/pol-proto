@@ -18,11 +18,11 @@ const SEND_FLOW = [
   "heavy",
   "choose-postage",
   "compensation",
-  "delivery-address",
   "recipient-details",
+  "delivery-address",
   "confirm-delivery-details",
-  "return-address",
   "return-details",
+  "return-address",
   "confirm-return-details",
 ];
 

@@ -1,7 +1,7 @@
 import { registerScreen, navigate } from "../utils/router.js";
 import { getSelectedAddress, setSelectedAddress } from "../utils/address-selection.js";
 
-const POSTCODE_RESULTS = [
+const DELIVERY_POSTCODE_RESULTS = [
   {
     id: "nw5-1tl",
     type: "group",
@@ -32,7 +32,7 @@ const POSTCODE_RESULTS = [
   })),
 ];
 
-const ADDRESS_RESULTS = [
+const DELIVERY_ADDRESS_RESULTS = [
   "Highgate Childrens Centre Highgate Studios 53-79 Highgate Road, London NW51TL",
   "Unit 442, Highgate Studios 53-57 Highgate Road, London NW51TL",
   "Unit 431, Highgate Studios 53-57 Highgate Road, London NW51TL",
@@ -44,6 +44,83 @@ const ADDRESS_RESULTS = [
   "Unit 325, Highgate Studios 53-57 Highgate Road, London NW51TL",
   "Unit 325, Highgate Studios 53-57 Highgate Road, London NW51TL",
 ];
+
+const RETURN_POSTCODE_RESULTS = [
+  {
+    id: "ec1m",
+    type: "group",
+    title: "EC1M, London",
+    subtitle: "17 Addresses",
+  },
+  {
+    id: "ec1m-3he",
+    type: "group",
+    title: "EC1M 3HE, London",
+    subtitle: "17 Addresses",
+  },
+  {
+    id: "ec2m",
+    type: "group",
+    title: "EC2M, London",
+    subtitle: "17 Addresses",
+  },
+  {
+    id: "ec3m",
+    type: "group",
+    title: "EC3M, London",
+    subtitle: "17 Addresses",
+  },
+  {
+    id: "ec4m",
+    type: "group",
+    title: "EC4M, London",
+    subtitle: "17 Addresses",
+  },
+  {
+    id: "ec5m",
+    type: "group",
+    title: "EC5M, London",
+    subtitle: "17 Addresses",
+  },
+  {
+    id: "charterhouse-6ha",
+    type: "plain",
+    text: "Charterhouse Street, London EC1 6HA",
+  },
+  {
+    id: "charterhouse-6hj",
+    type: "plain",
+    text: "Charterhouse Street, London EC1 6HJ",
+  },
+];
+
+const RETURN_ADDRESS_RESULTS = [
+  "11 Farringdon Road, London EC1M 3HE",
+  "13 Farringdon Road, London EC1M 3HE",
+  "15 Farringdon Road, London EC1M 3HE",
+  "17 Farringdon Road, London EC1M 3HE",
+  "19 Farringdon Road, London EC1M 3HE",
+  "21 Farringdon Road, London EC1M 3HE",
+  "23 Farringdon Road, London EC1M 3HE",
+  "25 Farringdon Road, London EC1M 3HE",
+  "27 Farringdon Road, London EC1M 3HE",
+  "29 Farringdon Road, London EC1M 3HE",
+];
+
+const ADDRESS_DATA_BY_MODE = {
+  delivery: {
+    label: "Recipient\u2019s address",
+    postcodeResults: DELIVERY_POSTCODE_RESULTS,
+    addressResults: DELIVERY_ADDRESS_RESULTS,
+    showMoreAddresses: true,
+  },
+  return: {
+    label: "Return address",
+    postcodeResults: RETURN_POSTCODE_RESULTS,
+    addressResults: RETURN_ADDRESS_RESULTS,
+    showMoreAddresses: true,
+  },
+};
 
 function escapeHtml(value) {
   return value
@@ -89,6 +166,15 @@ function addressResultRow(text) {
     >
       <p class="address-result-row__text">${text}</p>
     </button>
+  `;
+}
+
+function showMoreAddressesRow() {
+  return `
+    <div class="address-result-row address-result-row--show-more">
+      <span class="address-result-row__arrow address-result-row__arrow--down" aria-hidden="true"></span>
+      <p class="address-result-row__text">Show 65 more addresses</p>
+    </div>
   `;
 }
 
@@ -191,8 +277,10 @@ function renderBillingManualEntry() {
   `;
 }
 
-function renderAddressDrawer(query = "") {
+function renderAddressDrawer(query = "", mode = "delivery") {
   const safeQuery = escapeHtml(query);
+  const addressData = ADDRESS_DATA_BY_MODE[mode] || ADDRESS_DATA_BY_MODE.delivery;
+  const moreAddressesRow = addressData.showMoreAddresses ? showMoreAddressesRow() : "";
 
   return `
     <section
@@ -208,7 +296,7 @@ function renderAddressDrawer(query = "") {
       <div class="address-drawer-search-panel">
         <div class="address-search-field address-search-field--focused">
           <label class="address-search-field__label" for="address-drawer-input">
-            Recipient\u2019s address
+            ${addressData.label}
           </label>
           <p class="address-search-field__helper">
             Search for an address, street or postcode
@@ -229,7 +317,7 @@ function renderAddressDrawer(query = "") {
 
         <div class="address-drawer-results address-drawer-results--postcode" hidden>
           <div class="address-list">
-            ${POSTCODE_RESULTS.map(postcodeResultRow).join("")}
+            ${addressData.postcodeResults.map(postcodeResultRow).join("")}
           </div>
         </div>
 
@@ -239,7 +327,8 @@ function renderAddressDrawer(query = "") {
               <span class="address-result-row__arrow address-result-row__arrow--back" aria-hidden="true"></span>
               <span class="address-result-row__text">Back</span>
             </button>
-            ${ADDRESS_RESULTS.map(addressResultRow).join("")}
+            ${addressData.addressResults.map(addressResultRow).join("")}
+            ${moreAddressesRow}
           </div>
         </div>
       </div>
@@ -249,7 +338,7 @@ function renderAddressDrawer(query = "") {
 
 function resolveSearchState(query) {
   if (query.trim().length > 0) {
-    return "address-results";
+    return "postcode-results";
   }
   return "search";
 }
@@ -293,7 +382,7 @@ function mountAddressDrawer(
     return container;
   }
 
-  container.innerHTML = renderAddressDrawer(initialQuery);
+  container.innerHTML = renderAddressDrawer(initialQuery, mode);
   const input = container.querySelector("#address-drawer-input");
   input.focus();
 
