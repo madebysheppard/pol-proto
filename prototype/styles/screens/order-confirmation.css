@@ -189,7 +189,6 @@
 
 .order-confirmation-card--expanded .order-confirmation-card__price {
   font-size: var(--font-size-heading-small);
-  font-weight: var(--font-weight-bold);
   line-height: var(--leading-heading);
   color: var(--text-brand);
 }
