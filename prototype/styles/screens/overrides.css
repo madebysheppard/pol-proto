@@ -22,3 +22,12 @@
 .screen[class*="screen--"]:not(.screen--home):not(.screen--index) {
   background: var(--surface-raised);
 }
+
+/*
+  Sticky headers/footers only work reliably when no ancestor uses overflow != visible.
+  A few screens set `overflow: hidden` on `.screen`; override to keep Y overflow visible.
+*/
+.screen[class*="screen--"]:not(.screen--index):not(.screen--address-drawer) {
+  overflow-x: hidden;
+  overflow-y: visible;
+}

@@ -2,18 +2,7 @@ import { createButtonFromSpec } from "../components/button.js";
 import { registerScreen, navigate } from "../utils/router.js";
 import { screenAsset } from "../utils/assets.js";
 
-const ROYAL_MAIL_LOGO_URL =
-  "/Users/jacshe/.cursor/projects/Users-jacshe-dev-UT-260626/assets/provider-logo-08772a2d-0441-4586-8cf4-d2c6d78470d2.png";
-
-function statusBar() {
-  return `
-    <div class="status-bar" aria-hidden="true">
-      <span class="status-bar__time">9:30</span>
-      <span class="status-bar__camera"></span>
-      <span class="status-bar__icons"></span>
-    </div>
-  `;
-}
+const ROYAL_MAIL_LOGO_URL = screenAsset("home", "royal_mail_logo.png");
 
 function successHeading() {
   return `
@@ -152,7 +141,6 @@ function renderOrderConfirmationScreen({ expanded = false } = {}) {
   section.className = `screen screen--order-confirmation${expanded ? " screen--order-confirmation-full-receipt" : ""}`;
 
   section.innerHTML = `
-    ${statusBar()}
     <div class="order-confirmation-body">
       ${successHeading()}
 

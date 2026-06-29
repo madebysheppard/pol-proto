@@ -89,13 +89,13 @@
   flex-direction: column;
   gap: var(--size-24);
   width: 100%;
-  padding: 32px 0 24px;
+  padding: 32px var(--spacing-density-md) 24px;
 }
 
 .qr-hero__title {
   width: 100%;
-  max-width: 328px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   color: var(--text-primary);
   font-family: var(--font-family-brand), var(--font-family-fallback), sans-serif;
   font-size: var(--font-size-display);
@@ -105,8 +105,8 @@
 
 .qr-hero__card-wrap {
   width: 100%;
-  max-width: 328px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   filter: drop-shadow(0 2px 4px rgb(46 26 71 / 10%));
 }
 
@@ -171,7 +171,7 @@
 
 .qr-details {
   width: 100%;
-  padding: 0 15px;
+  padding: 0 var(--spacing-density-md);
   background: var(--surface-raised);
 }
 
@@ -313,7 +313,7 @@
 .qr-pager--top {
   justify-content: flex-start;
   gap: 16px;
-  margin-top: -41px;
+  margin-top: 0;
 }
 
 .qr-pager__dots {

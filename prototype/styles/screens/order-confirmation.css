@@ -15,7 +15,7 @@
   flex-direction: column;
   gap: var(--spacing-density-lg);
   min-height: 0;
-  padding: var(--spacing-stack-xl) var(--spacing-density-md) var(--spacing-stack-md);
+  padding: 32px var(--spacing-density-md) var(--spacing-stack-md);
   overflow-x: hidden;
 }
 

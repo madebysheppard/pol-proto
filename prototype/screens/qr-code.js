@@ -1,9 +1,8 @@
 import { registerScreen, navigate } from "../utils/router.js";
-import { assets, figmaIcon } from "../utils/assets.js";
+import { assets, figmaIcon, screenAsset } from "../utils/assets.js";
 
 const QR_IMAGE_URL = assets.image("qr-code.png");
-const PROVIDER_LOGO_URL =
-  "https://www.figma.com/api/mcp/asset/f00476ce-3814-4099-95cd-4a7be07fd619";
+const PROVIDER_LOGO_URL = screenAsset("home", "royal_mail_logo.png");
 const SCALE_ICON_URL =
   "https://www.figma.com/api/mcp/asset/8e564014-b292-4cb6-b4fb-636d263dfd0a";
 const TAPE_ICON_URL =
@@ -104,12 +103,6 @@ registerScreen("qr-code", () => {
   const section = document.createElement("section");
   section.className = "screen screen--qr-code";
   section.innerHTML = `
-    <div class="status-bar" aria-hidden="true">
-      <span class="status-bar__time">9:30</span>
-      <span class="status-bar__camera"></span>
-      <span class="status-bar__icons"></span>
-    </div>
-
     <header class="qr-app-bar">
       <button type="button" class="qr-app-bar__back" aria-label="Back to home">
         <span class="qr-app-bar__back-icon" aria-hidden="true">
