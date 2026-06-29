@@ -129,7 +129,7 @@
 }
 
 .order-confirmation-card--expanded .order-confirmation-card__header {
-  padding: var(--spacing-density-lg) var(--spacing-density-lg) 0;
+  padding: var(--spacing-density-lg);
 }
 
 .order-confirmation-card__product {
