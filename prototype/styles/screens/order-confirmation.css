@@ -32,7 +32,6 @@
   flex-direction: column;
   gap: var(--spacing-stack-md);
   width: 100%;
-  max-width: 402px;
 }
 
 .order-confirmation-success-icon {

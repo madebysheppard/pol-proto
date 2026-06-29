@@ -4,11 +4,9 @@
   width: 100%;
   max-width: 402px;
   min-height: 100dvh;
-  max-height: 100dvh;
   margin: 0 auto;
   background: var(--surface-raised);
   box-shadow: var(--elevation-broad-rest);
-  overflow: hidden;
 }
 
 
@@ -19,7 +17,6 @@
   gap: var(--spacing-density-lg);
   min-height: 0;
   padding: var(--spacing-density-xl) var(--spacing-density-md) var(--spacing-density-md);
-  overflow-y: auto;
 }
 
 .choose-postage-heading {
@@ -35,7 +32,7 @@
 .postage-option-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--spacing-stack-sm);
   width: 100%;
 }
 
@@ -217,13 +214,9 @@
 }
 
 .choose-postage-footer {
-  position: sticky;
-  bottom: 0;
-  z-index: 2;
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
   align-items: stretch;
   padding: var(--spacing-density-md);
-  background: var(--surface-raised);
 }

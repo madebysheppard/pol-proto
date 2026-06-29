@@ -48,7 +48,7 @@
 .weight-band-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-stack-md);
+  gap: var(--spacing-stack-sm);
   width: 100%;
 }
 

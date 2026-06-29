@@ -10,18 +10,6 @@ const TAPE_ICON_URL =
 
 const QR_ENTRIES = [
   {
-    code: "012345678910",
-    heading: "Ready for drop off before 21 April",
-    postcode: "SE13 7AP",
-    service: "Royal Mail Tracked 24",
-    itemNumber: "#1364838939",
-    weightLabel: "Small parcel",
-    weightValue: "0.7kg",
-    dimensions: "45 x 35 x 16 cm",
-    maxWeight: "2kg",
-    recipient: ["Liz Makes", "100 Wood Street", "London", "EC2V 7ER"],
-  },
-  {
     code: "098765432109",
     heading: "Ready for drop off before 22 April",
     postcode: "NW5 1TL",
@@ -32,6 +20,18 @@ const QR_ENTRIES = [
     dimensions: "61 x 46 x 46 cm",
     maxWeight: "20kg",
     recipient: ["Sam Greene", "42 Parkway", "London", "NW1 7AA"],
+  },
+  {
+    code: "012345678910",
+    heading: "Ready for drop off before 21 April",
+    postcode: "SE13 7AP",
+    service: "Royal Mail Tracked 24",
+    itemNumber: "#1364838939",
+    weightLabel: "Small parcel",
+    weightValue: "0.7kg",
+    dimensions: "45 x 35 x 16 cm",
+    maxWeight: "2kg",
+    recipient: ["Liz Makes", "100 Wood Street", "London", "EC2V 7ER"],
   },
 ];
 

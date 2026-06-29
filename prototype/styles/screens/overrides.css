@@ -31,3 +31,54 @@
   overflow-x: hidden;
   overflow-y: visible;
 }
+
+/*
+  Viewport scroll shell for standard flow screens:
+  header / progress / footer stay fixed; only the direct *-body child scrolls.
+  Excluded: index, home, qr-code, address drawer, and component demos.
+*/
+.screen[class*="screen--"]:not(
+    .screen--index,
+    .screen--home,
+    .screen--home-populated,
+    .screen--qr-code,
+    .screen--address-drawer,
+    .screen--button-demo,
+    .screen--choice-button-demo,
+    .screen--form-fields-demo
+  ) {
+  max-height: 100dvh;
+}
+
+.screen[class*="screen--"]:not(
+    .screen--index,
+    .screen--home,
+    .screen--home-populated,
+    .screen--qr-code,
+    .screen--address-drawer,
+    .screen--button-demo,
+    .screen--choice-button-demo,
+    .screen--form-fields-demo
+  )
+  > [class$="-body"] {
+  overflow-y: auto;
+}
+
+.screen[class*="screen--"]:not(
+    .screen--index,
+    .screen--home,
+    .screen--home-populated,
+    .screen--qr-code,
+    .screen--address-drawer,
+    .screen--button-demo,
+    .screen--choice-button-demo,
+    .screen--form-fields-demo
+  )
+  > [class$="-footer"] {
+  position: sticky;
+  bottom: 0;
+  z-index: 15;
+  flex-shrink: 0;
+  background: var(--surface-raised);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

@@ -48,7 +48,7 @@
 
 .progress-indicator {
   display: flex;
-  flex-shrink: 0;
+  flex: 0 0 auto;
   height: 5px;
   padding: 0 var(--spacing-density-md);
   background: var(--surface-raised);

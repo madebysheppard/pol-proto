@@ -42,8 +42,8 @@ function markContinueFooters(root) {
 
   const footers = root.querySelectorAll('.screen > [class$="-footer"]');
   footers.forEach((footer) => {
-    const hasContinueButton = Boolean(footer.querySelector(".btn--continue"));
-    footer.classList.toggle("screen-footer--continue", hasContinueButton);
+    const hasDockedCta = Boolean(footer.querySelector(".btn"));
+    footer.classList.toggle("screen-footer--continue", hasDockedCta);
   });
 }
 

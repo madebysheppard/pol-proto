@@ -4,7 +4,6 @@
   gap: var(--spacing-density-sm);
   width: 100%;
   min-width: 320px;
-  max-width: 375px;
   padding: var(--spacing-density-lg);
   border-radius: var(--radius-sm);
   background: var(--colour-pale-blue-tint-90);

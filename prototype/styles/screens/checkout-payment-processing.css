@@ -16,7 +16,7 @@
   gap: var(--spacing-stack-md);
   align-items: center;
   justify-content: center;
-  min-height: 874px;
+  min-height: 0;
   padding:
     var(--spacing-stack-xl)
     var(--spacing-density-md)

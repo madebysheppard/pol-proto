@@ -177,7 +177,6 @@
 
 .details-card {
   width: 100%;
-  max-width: 330px;
   border-radius: 8px;
   background: var(--surface-raised);
   filter: drop-shadow(0 2px 4px rgb(46 26 71 / 10%));
