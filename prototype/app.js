@@ -51,7 +51,7 @@ function updateViewportSurface(root) {
   const screen = root?.querySelector(".screen");
   const usesCanvasSurface = screen?.classList.contains("screen--home");
   const surface = usesCanvasSurface ? "canvas" : "raised";
-  const themeColor = usesCanvasSurface ? "#f5f3f8" : "#ffffff";
+  const themeColor = usesCanvasSurface ? "#fbfafb" : "#ffffff";
 
   document.body.dataset.screenSurface = surface;
 

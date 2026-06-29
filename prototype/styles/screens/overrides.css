@@ -1,0 +1,24 @@
+.screen.screen--index {
+  margin: 0 auto;
+}
+
+/* Remove "device frame" constraints so screens fill the viewport. */
+.screen[class*="screen--"]:not(.screen--index) {
+  max-width: 100%;
+  min-height: 100svh;
+  min-height: 100dvh;
+  margin: 0;
+  box-shadow: none;
+}
+
+/* Ensure screens that previously relied on a large fixed min-height still stretch. */
+.screen.screen--home-populated,
+.screen.screen--qr-code {
+  min-height: 100svh;
+  min-height: 100dvh;
+}
+
+/* Some screens set their own background; default to raised so sticky regions look correct. */
+.screen[class*="screen--"]:not(.screen--home):not(.screen--index) {
+  background: var(--surface-raised);
+}

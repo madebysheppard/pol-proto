@@ -42,7 +42,7 @@ html {
 }
 
 :root {
-  --prototype-screen-max-width: 402px;
+  --prototype-screen-max-width: 100%;
 }
 
 body {
@@ -96,9 +96,26 @@ body[data-screen-surface="raised"] {
 }
 
 .screen {
+  display: flex;
+  flex-direction: column;
   width: min(100%, var(--prototype-screen-max-width));
-  margin: 0 auto;
+  min-height: 100svh;
+  min-height: 100dvh;
+  margin: 0;
   overflow-x: hidden;
+}
+
+/* Prototype-only: hide faux device chrome without reserving space. */
+.status-bar {
+  display: none;
+}
+
+/* Keep headers docked at the top of the viewport. */
+.screen > header,
+.screen > [class$="-header"] {
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 /* Keep CTA footers docked on screens that render a Continue button. */
@@ -107,5 +124,6 @@ body[data-screen-surface="raised"] {
   bottom: 0;
   z-index: 15;
   margin-top: auto;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   background: var(--surface-raised);
 }
