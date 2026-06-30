@@ -31,7 +31,7 @@ const QR_ENTRIES = [
     weightValue: "0.7kg",
     dimensions: "45 x 35 x 16 cm",
     maxWeight: "2kg",
-    recipient: ["Liz Makes", "100 Wood Street", "London", "EC2V 7ER"],
+    recipient: ["Jack Stone", "Unit 315, Highgate Studios", "London", "Nw5 1TL"],
   },
 ];
 
