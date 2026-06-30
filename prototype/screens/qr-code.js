@@ -24,14 +24,14 @@ const QR_ENTRIES = [
   {
     code: "012345678910",
     heading: "Ready for drop off before 21 April",
-    postcode: "SE13 7AP",
+    postcode: "NW5 1TL",
     service: "Royal Mail Tracked 24",
     itemNumber: "#1364838939",
     weightLabel: "Small parcel",
     weightValue: "0.7kg",
     dimensions: "45 x 35 x 16 cm",
     maxWeight: "2kg",
-    recipient: ["Jack Stone", "Unit 315, Highgate Studios", "London", "Nw5 1TL"],
+    recipient: ["Jack Stone", "Unit 315, Highgate Studios", "London", "NW5 1TL"],
   },
 ];
 
