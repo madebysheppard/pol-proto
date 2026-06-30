@@ -12,7 +12,7 @@ const QR_ENTRIES = [
   {
     code: "098765432109",
     heading: "Ready for drop off before 22 April",
-    postcode: "NW5 1TL",
+    postcode: "NW1 7AA",
     service: "Royal Mail Tracked 24",
     itemNumber: "#1364838940",
     weightLabel: "Medium parcel",
